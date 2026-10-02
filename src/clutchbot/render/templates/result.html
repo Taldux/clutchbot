@@ -1,0 +1,40 @@
+<!doctype html>
+{% import "_parts.html" as parts %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/static/card.css">
+  <link rel="stylesheet" href="/static/result.css">
+</head>
+<body>
+<main class="card">
+  {{ parts.top(card) }}
+  {{ parts.scoreline(card) }}
+
+  <section class="rosters">
+    {% for team in [card.red, card.blue] %}
+    <div class="roster {{ team.side }}">
+      <div class="roster-head">
+        <span>Player</span>
+        <span>Match cost</span>
+      </div>
+      {% for player in team.players %}
+      <div class="player{% if player.is_mvp %} mvp{% endif %}">
+        {{ parts.avatar(player.avatar_url, "small") }}
+        <span class="name ellipsis">{{ player.name }}</span>
+        {% if player.is_mvp %}<span class="mvp-tag">MVP</span>{% endif %}
+        <span class="maps">{{ parts.plural(player.maps_played, "map") }}</span>
+        <span class="cost">{{ player.cost }}</span>
+      </div>
+      {% endfor %}
+      {% if team.hidden_players %}
+      <div class="more">+{{ team.hidden_players }} more</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+
+  {{ parts.footer(card) }}
+</main>
+</body>
+</html>

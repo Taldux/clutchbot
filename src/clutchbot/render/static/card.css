@@ -1,0 +1,98 @@
+/* Shared by every card: font, colours, page size and a few helpers */
+
+/* One variable font file holds every weight from 100 to 900 */
+@font-face {
+  font-family: "Exo 2";
+  src: url("/static/fonts/Exo2-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --bg: #15151c;
+  --panel: #1e1e28;
+  --panel-light: #282834;
+  --line: #34344a;
+  --text: #f2f2f7;
+  --muted: #9b9bb0;
+
+  --red: #ff5f6d;
+  --blue: #5f8cff;
+  --winner: #5ee89c;
+  --gold: #ffd166;
+  --accent: #ff66aa; /* osu! pink */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 1200px;
+  height: 675px;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Exo 2", sans-serif;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums; /* digits line up in score columns */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Long names are cut off with "…" instead of overflowing (inside flex rows too) */
+.ellipsis {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Player pictures; --avatar is set per player, the colour shows when there's no image */
+.avatar {
+  --avatar: none;
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--avatar) center / cover no-repeat, var(--panel-light);
+}
+
+.avatar.small {
+  width: 26px;
+  height: 26px;
+}
+
+.avatar.medium {
+  width: 52px;
+  height: 52px;
+}
+
+.avatar.large {
+  width: 118px;
+  height: 118px;
+  border-radius: 22px;
+}
+
+.red {
+  color: var(--red);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.winner {
+  color: var(--winner);
+}
+
+.muted {
+  color: var(--muted);
+}

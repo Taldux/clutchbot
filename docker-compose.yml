@@ -1,0 +1,46 @@
+#   docker compose pull && docker compose up -d     # start or update
+#   docker compose logs -f                          # watch it
+
+services:
+  clutchbot:
+    image: ghcr.io/taldux/clutchbot:${CLUTCHBOT_TAG:?set CLUTCHBOT_TAG in .env, e.g. 1.0.0}
+    platform: linux/amd64
+    container_name: clutchbot
+    restart: unless-stopped
+    init: true
+    shm_size: 512m  # Chromium crashes with default 64 MB shared memory
+    mem_limit: 1g
+    environment:
+      TZ: ${TZ:-UTC}  # for log times
+      DATA_DIR: /data
+      OSU_CLIENT_ID: ${OSU_CLIENT_ID}
+      OSU_CLIENT_SECRET: ${OSU_CLIENT_SECRET}
+      TWITTER_CONSUMER_KEY: ${TWITTER_CONSUMER_KEY:-}
+      TWITTER_CONSUMER_SECRET: ${TWITTER_CONSUMER_SECRET:-}
+      TWITTER_ACCESS_TOKEN: ${TWITTER_ACCESS_TOKEN:-}
+      TWITTER_ACCESS_SECRET: ${TWITTER_ACCESS_SECRET:-}
+      DRY_RUN: ${DRY_RUN:-true}
+      POLL_INTERVAL_SECONDS: ${POLL_INTERVAL_SECONDS:-600}
+      MATCH_EXPIRY_HOURS: ${MATCH_EXPIRY_HOURS:-24}
+      CLUTCH_THRESHOLD_PERCENT: ${CLUTCH_THRESHOLD_PERCENT:-5}
+      WARMUP_GAMES_CHECKED: ${WARMUP_GAMES_CHECKED:-2}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      LOG_FORMAT: ${LOG_FORMAT:-json}
+      NTFY_URL: ${NTFY_URL:-}
+      # Prometheus metrics at http://clutchbot:9102/metrics
+      METRICS_PORT: ${METRICS_PORT:-9102}
+    networks:
+      - monitoring
+    volumes:
+      # database, acronyms.json, image cache, heartbeat, dry-run cards (must be owned by uid 1000)
+      - ./data:/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  monitoring:
+    name: ${MONITORING_NETWORK:-monitoring}
+    external: true

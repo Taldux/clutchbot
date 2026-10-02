@@ -1,0 +1,46 @@
+{# Pieces shared by the result cards #}
+
+{% macro top(card) %}
+<header class="top">
+  <div class="tournament ellipsis">{{ card.tournament }}</div>
+  <div class="meta muted">{{ card.date }} · {{ card.match_link }}</div>
+</header>
+{% endmacro %}
+
+{% macro heading(card, side) %}
+<div class="team {{ side.side }}{% if not side.is_winner and not card.is_draw %} lost{% endif %}">
+  <div class="team-name{% if side.long_name %} long{% endif %}">{{ side.name }}</div>
+  {% if side.is_winner %}<div class="badge">Winner</div>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro scoreline(card) %}
+<section class="scoreline">
+  {{ heading(card, card.red) }}
+  <div class="score">
+    <div class="numbers">
+      <span class="red">{{ card.red.wins }}</span>
+      <span class="dash">–</span>
+      <span class="blue">{{ card.blue.wins }}</span>
+    </div>
+    {% if card.is_draw %}<div class="draw">Draw</div>{% endif %}
+  </div>
+  {{ heading(card, card.blue) }}
+</section>
+{% endmacro %}
+
+{# A round player picture; without a URL (or if it fails to load) just the placeholder circle #}
+{% macro avatar(url, size) %}<span class="avatar {{ size }}"{% if url %} style="--avatar: url('{{ url }}')"{% endif %}></span>{% endmacro %}
+
+{% macro plural(count, word) %}{{ count }} {{ word if count == 1 else word ~ "s" }}{% endmacro %}
+
+{% macro footer(card, extra="") %}
+<footer class="bottom">
+  <span class="muted">
+    {{ plural(card.maps_played, "map") }}
+    {% if card.clutch_maps %} · <span class="clutch">{{ plural(card.clutch_maps, "clutch map") }}</span>{% endif %}
+    {% if extra %} · {{ extra }}{% endif %}
+  </span>
+  <span class="brand">ClutchBot</span>
+</footer>
+{% endmacro %}

@@ -1,0 +1,29 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# Tool caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# uv build output
+dist/
+build/
+
+# Secrets
+.env
+
+# Runtime state and rendered cards
+data/
+*.db
+output/
+
+# Other
+*.local.md
+/docs/api

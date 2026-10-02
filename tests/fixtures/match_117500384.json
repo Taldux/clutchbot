@@ -1,0 +1,3913 @@
+{
+  "match": {
+    "id": 117500384,
+    "start_time": "2025-03-16T15:20:44+00:00",
+    "end_time": "2025-03-16T16:28:03+00:00",
+    "name": "BLB: (Hessen) vs (Berlin)"
+  },
+  "events": [
+    {
+      "id": 2425417127,
+      "detail": {
+        "type": "match-created"
+      },
+      "timestamp": "2025-03-16T15:20:44+00:00",
+      "user_id": 4191188
+    },
+    {
+      "id": 2425418307,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:25:41+00:00",
+      "user_id": 5132353
+    },
+    {
+      "id": 2425418536,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:26:29+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425418612,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:26:44+00:00",
+      "user_id": 7780605
+    },
+    {
+      "id": 2425418717,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:27:15+00:00",
+      "user_id": 11495128
+    },
+    {
+      "id": 2425419010,
+      "detail": {
+        "type": "host-changed"
+      },
+      "timestamp": "2025-03-16T15:28:31+00:00",
+      "user_id": 7780605
+    },
+    {
+      "id": 2425419097,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:28:49+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425419264,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:29:33+00:00",
+      "user_id": 17791142
+    },
+    {
+      "id": 2425419490,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:30:31+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425419491,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:30:32+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425419723,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:31:38+00:00",
+      "user_id": 6643511
+    },
+    {
+      "id": 2425419993,
+      "detail": {
+        "type": "other",
+        "text": "BLB: (Hessen) vs (Berlin)"
+      },
+      "timestamp": "2025-03-16T15:32:45+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 3020554,
+        "id": 613460048,
+        "start_time": "2025-03-16T15:32:45Z",
+        "end_time": "2025-03-16T15:37:25Z",
+        "match_id": 117500384,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "team-vs",
+        "mods": [],
+        "beatmap": {
+          "beatmapset_id": 1471308,
+          "difficulty_rating": 7.90326,
+          "id": 3020554,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 265,
+          "user_id": 7715620,
+          "version": "Rose de fer",
+          "beatmapset": {
+            "anime_cover": true,
+            "artist": "Yousei Teikoku",
+            "artist_unicode": "妖精帝國",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/1471308/covers/cover.jpg?1624217448",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/1471308/covers/cover@2x.jpg?1624217448",
+              "card": "https://assets.ppy.sh/beatmaps/1471308/covers/card.jpg?1624217448",
+              "card@2x": "https://assets.ppy.sh/beatmaps/1471308/covers/card@2x.jpg?1624217448",
+              "list": "https://assets.ppy.sh/beatmaps/1471308/covers/list.jpg?1624217448",
+              "list@2x": "https://assets.ppy.sh/beatmaps/1471308/covers/list@2x.jpg?1624217448",
+              "slimcover": "https://assets.ppy.sh/beatmaps/1471308/covers/slimcover.jpg?1624217448",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/1471308/covers/slimcover@2x.jpg?1624217448"
+            },
+            "creator": "IsomirDiAngelo",
+            "favourite_count": 122,
+            "genre_id": 11,
+            "hype": null,
+            "id": 1471308,
+            "language_id": 3,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 27541,
+            "preview_url": "https://b.ppy.sh/preview/1471308.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "IRON ROSE",
+            "title_unicode": "IRON ROSE",
+            "track_id": null,
+            "user_id": 7715620,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 176,
+              "great": 1450,
+              "ok": 160,
+              "meh": 34
+            },
+            "beatmap_id": 3020554,
+            "best_id": null,
+            "id": null,
+            "rank": "C",
+            "type": "legacy_match_score",
+            "user_id": 17791142,
+            "accuracy": 0.8291208791208792,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:32:45Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 63873,
+            "max_combo": 112,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 63873,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 25,
+              "great": 1645,
+              "ok": 140,
+              "meh": 10
+            },
+            "beatmap_id": 3020554,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 7780605,
+            "accuracy": 0.9304029304029304,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:32:45Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 229331,
+            "max_combo": 321,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 229331,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 41,
+              "great": 1687,
+              "ok": 74,
+              "meh": 18
+            },
+            "beatmap_id": 3020554,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 6643511,
+            "accuracy": 0.9421245421245421,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:32:45Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 229360,
+            "max_combo": 450,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 229360,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 2,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 67,
+              "great": 1420,
+              "ok": 302,
+              "meh": 31
+            },
+            "beatmap_id": 3020554,
+            "best_id": null,
+            "id": null,
+            "rank": "C",
+            "type": "legacy_match_score",
+            "user_id": 5132353,
+            "accuracy": 0.8383699633699634,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:32:45Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 82034,
+            "max_combo": 200,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 82034,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 3,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 221,
+              "great": 1423,
+              "ok": 134,
+              "meh": 42
+            },
+            "beatmap_id": 3020554,
+            "best_id": null,
+            "id": null,
+            "rank": "F",
+            "type": "legacy_match_score",
+            "user_id": 11495128,
+            "accuracy": 0.8102564102564103,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:32:45Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 55066,
+            "max_combo": 103,
+            "passed": false,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 55066,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 5,
+              "team": "blue",
+              "pass": false
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 433,
+              "great": 1121,
+              "ok": 215,
+              "meh": 51
+            },
+            "beatmap_id": 3020554,
+            "best_id": null,
+            "id": null,
+            "rank": "C",
+            "type": "legacy_match_score",
+            "user_id": 19857248,
+            "accuracy": 0.659981684981685,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:32:45Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 20199,
+            "max_combo": 127,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 20199,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 6,
+              "team": "blue",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2425420407,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:34:34+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425420526,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:35:05+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425420673,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:35:50+00:00",
+      "user_id": 11983880
+    },
+    {
+      "id": 2425420715,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:36:05+00:00",
+      "user_id": 11983880
+    },
+    {
+      "id": 2425421128,
+      "detail": {
+        "type": "host-changed"
+      },
+      "timestamp": "2025-03-16T15:37:54+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425421195,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:38:14+00:00",
+      "user_id": 11983880
+    },
+    {
+      "id": 2425421292,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:38:42+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425421365,
+      "detail": {
+        "type": "other",
+        "text": "BLB: (Hessen) vs (Berlin)"
+      },
+      "timestamp": "2025-03-16T15:39:02+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 5027004,
+        "id": 613460475,
+        "start_time": "2025-03-16T15:39:02Z",
+        "end_time": "2025-03-16T15:41:07Z",
+        "match_id": 117500384,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "team-vs",
+        "mods": [],
+        "beatmap": {
+          "beatmapset_id": 2340129,
+          "difficulty_rating": 6.90278,
+          "id": 5027004,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 113,
+          "user_id": 19857248,
+          "version": "BLB 2025 Berlin",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "Cano",
+            "artist_unicode": "Cano",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/2340129/covers/cover.jpg?1744558310",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/2340129/covers/cover@2x.jpg?1744558310",
+              "card": "https://assets.ppy.sh/beatmaps/2340129/covers/card.jpg?1744558310",
+              "card@2x": "https://assets.ppy.sh/beatmaps/2340129/covers/card@2x.jpg?1744558310",
+              "list": "https://assets.ppy.sh/beatmaps/2340129/covers/list.jpg?1744558310",
+              "list@2x": "https://assets.ppy.sh/beatmaps/2340129/covers/list@2x.jpg?1744558310",
+              "slimcover": "https://assets.ppy.sh/beatmaps/2340129/covers/slimcover.jpg?1744558310",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/2340129/covers/slimcover@2x.jpg?1744558310"
+            },
+            "creator": "Herazu",
+            "favourite_count": 2,
+            "genre_id": 1,
+            "hype": null,
+            "id": 2340129,
+            "language_id": 1,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 263,
+            "preview_url": "https://b.ppy.sh/preview/2340129.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "[MAD] Berliner S-Bahn - Ray of Hope",
+            "title_unicode": "[音MAD] Berliner S-Bahn - Ray of Hope",
+            "track_id": null,
+            "user_id": 19857248,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 71,
+              "great": 523,
+              "ok": 41,
+              "meh": 15
+            },
+            "beatmap_id": 5027004,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 17791142,
+            "accuracy": 0.8294871794871795,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:39:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 138200,
+            "max_combo": 176,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 138200,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 22,
+              "great": 565,
+              "ok": 58,
+              "meh": 5
+            },
+            "beatmap_id": 5027004,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 7780605,
+            "accuracy": 0.9002564102564102,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:39:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 425300,
+            "max_combo": 488,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 425300,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 24,
+              "great": 608,
+              "ok": 14,
+              "meh": 4
+            },
+            "beatmap_id": 5027004,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 6643511,
+            "accuracy": 0.9435897435897436,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:39:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 346497,
+            "max_combo": 292,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 346497,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 2,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 23,
+              "great": 558,
+              "ok": 57,
+              "meh": 12
+            },
+            "beatmap_id": 5027004,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 5132353,
+            "accuracy": 0.8907692307692308,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:39:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 223177,
+            "max_combo": 203,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 223177,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 3,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 36,
+              "great": 560,
+              "ok": 38,
+              "meh": 16
+            },
+            "beatmap_id": 5027004,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 13627426,
+            "accuracy": 0.8851282051282051,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:39:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 255262,
+            "max_combo": 287,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 255262,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 4,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 24,
+              "great": 599,
+              "ok": 20,
+              "meh": 7
+            },
+            "beatmap_id": 5027004,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11495128,
+            "accuracy": 0.9335897435897436,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:39:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 424106,
+            "max_combo": 469,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 424106,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 5,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 28,
+              "great": 525,
+              "ok": 88,
+              "meh": 9
+            },
+            "beatmap_id": 5027004,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 19857248,
+            "accuracy": 0.8551282051282051,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:39:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 176697,
+            "max_combo": 210,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 176697,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 6,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 40,
+              "great": 568,
+              "ok": 27,
+              "meh": 15
+            },
+            "beatmap_id": 5027004,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 11983880,
+            "accuracy": 0.8915384615384615,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:39:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 222737,
+            "max_combo": 188,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 222737,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 7,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [],
+            "statistics": {
+              "miss": 20,
+              "great": 578,
+              "ok": 32,
+              "meh": 20
+            },
+            "beatmap_id": 5027004,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 4280363,
+            "accuracy": 0.9107692307692308,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:39:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 268752,
+            "max_combo": 287,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 268752,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 8,
+              "team": "blue",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2425421874,
+      "detail": {
+        "type": "host-changed"
+      },
+      "timestamp": "2025-03-16T15:41:11+00:00",
+      "user_id": 0
+    },
+    {
+      "id": 2425421953,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:41:37+00:00",
+      "user_id": 6643511
+    },
+    {
+      "id": 2425422018,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:41:50+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425422458,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:43:42+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425422557,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:44:14+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425422785,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:45:07+00:00",
+      "user_id": 6643511
+    },
+    {
+      "id": 2425422885,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:45:36+00:00",
+      "user_id": 11495128
+    },
+    {
+      "id": 2425422944,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:45:49+00:00",
+      "user_id": 17791142
+    },
+    {
+      "id": 2425423121,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:46:26+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425423212,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:46:48+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425423225,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:46:51+00:00",
+      "user_id": 11983880
+    },
+    {
+      "id": 2425423279,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:47:04+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425423497,
+      "detail": {
+        "type": "other",
+        "text": "BLB: (Hessen) vs (Berlin)"
+      },
+      "timestamp": "2025-03-16T15:47:54+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 3902487,
+        "id": 613461056,
+        "start_time": "2025-03-16T15:47:54Z",
+        "end_time": "2025-03-16T15:52:16Z",
+        "match_id": 117500384,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "team-vs",
+        "mods": [
+          "NF",
+          "HD"
+        ],
+        "beatmap": {
+          "beatmapset_id": 1676482,
+          "difficulty_rating": 6.66056,
+          "id": 3902487,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "ranked",
+          "total_length": 249,
+          "user_id": 9088487,
+          "version": "Extra",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "Yorushika",
+            "artist_unicode": "ヨルシカ",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/1676482/covers/cover.jpg?1679731335",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/1676482/covers/cover@2x.jpg?1679731335",
+              "card": "https://assets.ppy.sh/beatmaps/1676482/covers/card.jpg?1679731335",
+              "card@2x": "https://assets.ppy.sh/beatmaps/1676482/covers/card@2x.jpg?1679731335",
+              "list": "https://assets.ppy.sh/beatmaps/1676482/covers/list.jpg?1679731335",
+              "list@2x": "https://assets.ppy.sh/beatmaps/1676482/covers/list@2x.jpg?1679731335",
+              "slimcover": "https://assets.ppy.sh/beatmaps/1676482/covers/slimcover.jpg?1679731335",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/1676482/covers/slimcover@2x.jpg?1679731335"
+            },
+            "creator": "Deca",
+            "favourite_count": 687,
+            "genre_id": 4,
+            "hype": null,
+            "id": 1676482,
+            "language_id": 3,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 784900,
+            "preview_url": "https://b.ppy.sh/preview/1676482.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "ranked",
+            "title": "Thoughtcrime",
+            "title_unicode": "思想犯",
+            "track_id": null,
+            "user_id": 9088487,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 29,
+              "great": 1236,
+              "ok": 7,
+              "meh": 1
+            },
+            "beatmap_id": 3902487,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 13627426,
+            "accuracy": 0.9728986645718775,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:47:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 331522,
+            "max_combo": 363,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 331522,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 5,
+              "great": 1258,
+              "ok": 10
+            },
+            "beatmap_id": 3902487,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 7780605,
+            "accuracy": 0.9908352971982194,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:47:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 1009278,
+            "max_combo": 1514,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 1009278,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 16,
+              "great": 1249,
+              "ok": 7,
+              "meh": 1
+            },
+            "beatmap_id": 3902487,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 6643511,
+            "accuracy": 0.9831107619795758,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:47:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 375508,
+            "max_combo": 277,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 375508,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 2,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 24,
+              "great": 1231,
+              "ok": 16,
+              "meh": 2
+            },
+            "beatmap_id": 3902487,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 5132353,
+            "accuracy": 0.9714584969887405,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:47:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 355315,
+            "max_combo": 390,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 355315,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 3,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 12,
+              "great": 1255,
+              "ok": 3,
+              "meh": 3
+            },
+            "beatmap_id": 3902487,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 4280363,
+            "accuracy": 0.9870384917517675,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:47:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 399845,
+            "max_combo": 369,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 399845,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 4,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 2,
+              "great": 1248,
+              "ok": 23
+            },
+            "beatmap_id": 3902487,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 19857248,
+            "accuracy": 0.9863838701230688,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:47:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 886376,
+            "max_combo": 1395,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 886376,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 5,
+              "team": "blue",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2425424719,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:54:06+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425424759,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:54:15+00:00",
+      "user_id": 5132353
+    },
+    {
+      "id": 2425424782,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T15:54:19+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425424972,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:55:13+00:00",
+      "user_id": 11495128
+    },
+    {
+      "id": 2425425027,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:55:27+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425425087,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:55:46+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425425231,
+      "detail": {
+        "type": "other",
+        "text": "BLB: (Hessen) vs (Berlin)"
+      },
+      "timestamp": "2025-03-16T15:56:23+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 4057190,
+        "id": 613461589,
+        "start_time": "2025-03-16T15:56:23Z",
+        "end_time": "2025-03-16T16:00:05Z",
+        "match_id": 117500384,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "team-vs",
+        "mods": [
+          "NF",
+          "HR"
+        ],
+        "beatmap": {
+          "beatmapset_id": 1958324,
+          "difficulty_rating": 5.89317,
+          "id": 4057190,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "ranked",
+          "total_length": 206,
+          "user_id": 1047883,
+          "version": "RLC's X",
+          "beatmapset": {
+            "anime_cover": true,
+            "artist": "AZKi",
+            "artist_unicode": "AZKi",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/1958324/covers/cover.jpg?1745675910",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/1958324/covers/cover@2x.jpg?1745675910",
+              "card": "https://assets.ppy.sh/beatmaps/1958324/covers/card.jpg?1745675910",
+              "card@2x": "https://assets.ppy.sh/beatmaps/1958324/covers/card@2x.jpg?1745675910",
+              "list": "https://assets.ppy.sh/beatmaps/1958324/covers/list.jpg?1745675910",
+              "list@2x": "https://assets.ppy.sh/beatmaps/1958324/covers/list@2x.jpg?1745675910",
+              "slimcover": "https://assets.ppy.sh/beatmaps/1958324/covers/slimcover.jpg?1745675910",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/1958324/covers/slimcover@2x.jpg?1745675910"
+            },
+            "creator": "Aeril",
+            "favourite_count": 91,
+            "genre_id": 10,
+            "hype": null,
+            "id": 1958324,
+            "language_id": 3,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 38284,
+            "preview_url": "https://b.ppy.sh/preview/1958324.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "ranked",
+            "title": "Intersection",
+            "title_unicode": "Intersection",
+            "track_id": null,
+            "user_id": 4334976,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 6,
+              "great": 978,
+              "ok": 19,
+              "meh": 3
+            },
+            "beatmap_id": 4057190,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 13627426,
+            "accuracy": 0.9789595758780649,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:56:23Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 489583,
+            "max_combo": 674,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 489583,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 2,
+              "great": 943,
+              "ok": 59,
+              "meh": 2
+            },
+            "beatmap_id": 4057190,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 7780605,
+            "accuracy": 0.9572564612326043,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:56:23Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 561995,
+            "max_combo": 834,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 561995,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 1,
+              "great": 916,
+              "ok": 88,
+              "meh": 1
+            },
+            "beatmap_id": 4057190,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 6643511,
+            "accuracy": 0.9398608349900597,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:56:23Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 489974,
+            "max_combo": 803,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 489974,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 2,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 10,
+              "great": 960,
+              "ok": 33,
+              "meh": 3
+            },
+            "beatmap_id": 4057190,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11495128,
+            "accuracy": 0.9657057654075547,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:56:23Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 402442,
+            "max_combo": 574,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 402442,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 3,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 4,
+              "great": 959,
+              "ok": 34,
+              "meh": 9
+            },
+            "beatmap_id": 4057190,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 4280363,
+            "accuracy": 0.9660371106693174,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:56:23Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 377502,
+            "max_combo": 442,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 377502,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 4,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 6,
+              "great": 945,
+              "ok": 47,
+              "meh": 8
+            },
+            "beatmap_id": 4057190,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 16727203,
+            "accuracy": 0.9562624254473161,
+            "build_id": null,
+            "ended_at": "2025-03-16T15:56:23Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 497468,
+            "max_combo": 690,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 497468,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 5,
+              "team": "blue",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2425425754,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T15:58:32+00:00",
+      "user_id": 5132353
+    },
+    {
+      "id": 2425426120,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:00:17+00:00",
+      "user_id": 11495128
+    },
+    {
+      "id": 2425426213,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:00:42+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425426237,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:00:47+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425426528,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:01:55+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425426586,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:02:09+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425426679,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:02:29+00:00",
+      "user_id": 11495128
+    },
+    {
+      "id": 2425426741,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:02:38+00:00",
+      "user_id": 11495128
+    },
+    {
+      "id": 2425426762,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:02:43+00:00",
+      "user_id": 10212942
+    },
+    {
+      "id": 2425426786,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:02:48+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425426804,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:02:53+00:00",
+      "user_id": 10212942
+    },
+    {
+      "id": 2425426841,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:03:03+00:00",
+      "user_id": 10212942
+    },
+    {
+      "id": 2425426975,
+      "detail": {
+        "type": "other",
+        "text": "BLB: (Hessen) vs (Berlin)"
+      },
+      "timestamp": "2025-03-16T16:03:37+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 3613813,
+        "id": 613462054,
+        "start_time": "2025-03-16T16:03:37Z",
+        "end_time": "2025-03-16T16:06:04Z",
+        "match_id": 117500384,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "team-vs",
+        "mods": [
+          "NF"
+        ],
+        "beatmap": {
+          "beatmapset_id": 1765453,
+          "difficulty_rating": 6.00561,
+          "id": 3613813,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "ranked",
+          "total_length": 139,
+          "user_id": 53378,
+          "version": "ktgster's expert",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "tarolabo",
+            "artist_unicode": "tarolabo",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/1765453/covers/cover.jpg?1661776432",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/1765453/covers/cover@2x.jpg?1661776432",
+              "card": "https://assets.ppy.sh/beatmaps/1765453/covers/card.jpg?1661776432",
+              "card@2x": "https://assets.ppy.sh/beatmaps/1765453/covers/card@2x.jpg?1661776432",
+              "list": "https://assets.ppy.sh/beatmaps/1765453/covers/list.jpg?1661776432",
+              "list@2x": "https://assets.ppy.sh/beatmaps/1765453/covers/list@2x.jpg?1661776432",
+              "slimcover": "https://assets.ppy.sh/beatmaps/1765453/covers/slimcover.jpg?1661776432",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/1765453/covers/slimcover@2x.jpg?1661776432"
+            },
+            "creator": "DeviousPanda",
+            "favourite_count": 230,
+            "genre_id": 10,
+            "hype": null,
+            "id": 1765453,
+            "language_id": 5,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 209701,
+            "preview_url": "https://b.ppy.sh/preview/1765453.mp3",
+            "source": "THE BMS OF FIGHTERS 2010 -THE EVOLUTION OF WAR-",
+            "spotlight": true,
+            "status": "ranked",
+            "title": "eth ken",
+            "title_unicode": "eth剣",
+            "track_id": null,
+            "user_id": 4966334,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 5,
+              "great": 759,
+              "ok": 103,
+              "meh": 4
+            },
+            "beatmap_id": 3613813,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 13627426,
+            "accuracy": 0.9115958668197475,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:03:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 324591,
+            "max_combo": 493,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 324591,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "great": 804,
+              "ok": 66,
+              "meh": 1
+            },
+            "beatmap_id": 3613813,
+            "best_id": null,
+            "id": null,
+            "rank": "S",
+            "type": "legacy_match_score",
+            "user_id": 7780605,
+            "accuracy": 0.9485265977803291,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:03:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 535182,
+            "max_combo": 681,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 535182,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 5,
+              "great": 779,
+              "ok": 83,
+              "meh": 4
+            },
+            "beatmap_id": 3613813,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 6643511,
+            "accuracy": 0.926903941829315,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:03:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 319563,
+            "max_combo": 488,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 319563,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 2,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 12,
+              "great": 759,
+              "ok": 78,
+              "meh": 22
+            },
+            "beatmap_id": 3613813,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 5132353,
+            "accuracy": 0.9054726368159204,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:03:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 232004,
+            "max_combo": 284,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 232004,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 3,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "great": 679,
+              "ok": 176,
+              "meh": 16
+            },
+            "beatmap_id": 3613813,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 19857248,
+            "accuracy": 0.849980864906238,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:03:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 647703,
+            "max_combo": 1150,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 647703,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 4,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 1,
+              "great": 716,
+              "ok": 151,
+              "meh": 3
+            },
+            "beatmap_id": 3613813,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 10212942,
+            "accuracy": 0.8804056639877536,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:03:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 425027,
+            "max_combo": 681,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 425027,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 5,
+              "team": "blue",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2425427701,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:06:32+00:00",
+      "user_id": 6643511
+    },
+    {
+      "id": 2425427737,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:06:38+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425427759,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:06:44+00:00",
+      "user_id": 10212942
+    },
+    {
+      "id": 2425427869,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:07:13+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425427878,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:07:14+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425427915,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:07:28+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425428023,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:07:55+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425428203,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:08:45+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425428244,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:08:54+00:00",
+      "user_id": 11582986
+    },
+    {
+      "id": 2425428264,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:08:58+00:00",
+      "user_id": 11983880
+    },
+    {
+      "id": 2425428308,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:09:06+00:00",
+      "user_id": 10212942
+    },
+    {
+      "id": 2425428317,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:09:10+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425428495,
+      "detail": {
+        "type": "other",
+        "text": "BLB: (Hessen) vs (Berlin)"
+      },
+      "timestamp": "2025-03-16T16:09:54+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 4838497,
+        "id": 613462472,
+        "start_time": "2025-03-16T16:09:54Z",
+        "end_time": "2025-03-16T16:12:44Z",
+        "match_id": 117500384,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "team-vs",
+        "mods": [
+          "NF"
+        ],
+        "beatmap": {
+          "beatmapset_id": 2271539,
+          "difficulty_rating": 7.07659,
+          "id": 4838497,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 169,
+          "user_id": 2166762,
+          "version": "Chaos",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "Stazma The Junglechrist",
+            "artist_unicode": "Stazma The Junglechrist",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/2271539/covers/cover.jpg?1732489234",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/2271539/covers/cover@2x.jpg?1732489234",
+              "card": "https://assets.ppy.sh/beatmaps/2271539/covers/card.jpg?1732489234",
+              "card@2x": "https://assets.ppy.sh/beatmaps/2271539/covers/card@2x.jpg?1732489234",
+              "list": "https://assets.ppy.sh/beatmaps/2271539/covers/list.jpg?1732489234",
+              "list@2x": "https://assets.ppy.sh/beatmaps/2271539/covers/list@2x.jpg?1732489234",
+              "slimcover": "https://assets.ppy.sh/beatmaps/2271539/covers/slimcover.jpg?1732489234",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/2271539/covers/slimcover@2x.jpg?1732489234"
+            },
+            "creator": "Silverboxer",
+            "favourite_count": 31,
+            "genre_id": 10,
+            "hype": null,
+            "id": 2271539,
+            "language_id": 5,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 27908,
+            "preview_url": "https://b.ppy.sh/preview/2271539.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "Burn Your TV",
+            "title_unicode": "Burn Your TV",
+            "track_id": null,
+            "user_id": 2166762,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "great": 1029,
+              "ok": 5,
+              "meh": 2
+            },
+            "beatmap_id": 4838497,
+            "best_id": null,
+            "id": null,
+            "rank": "S",
+            "type": "legacy_match_score",
+            "user_id": 7780605,
+            "accuracy": 0.9951737451737451,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:09:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 714155,
+            "max_combo": 1119,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 714155,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 8,
+              "great": 923,
+              "ok": 100,
+              "meh": 5
+            },
+            "beatmap_id": 4838497,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 11582986,
+            "accuracy": 0.9239060489060489,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:09:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 387869,
+            "max_combo": 763,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 387869,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 2,
+              "great": 968,
+              "ok": 58,
+              "meh": 8
+            },
+            "beatmap_id": 4838497,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11983880,
+            "accuracy": 0.9543114543114544,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:09:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 569767,
+            "max_combo": 1031,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 569767,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 2,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 3,
+              "great": 999,
+              "ok": 33,
+              "meh": 1
+            },
+            "beatmap_id": 4838497,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 5132353,
+            "accuracy": 0.9750643500643501,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:09:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 422985,
+            "max_combo": 517,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 422985,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 3,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "great": 1014,
+              "ok": 21,
+              "meh": 1
+            },
+            "beatmap_id": 4838497,
+            "best_id": null,
+            "id": null,
+            "rank": "S",
+            "type": "legacy_match_score",
+            "user_id": 16727203,
+            "accuracy": 0.9856821106821106,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:09:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 749823,
+            "max_combo": 1191,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 749823,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 4,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 10,
+              "great": 936,
+              "ok": 84,
+              "meh": 6
+            },
+            "beatmap_id": 4838497,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 10212942,
+            "accuracy": 0.9314671814671814,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:09:54Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 421808,
+            "max_combo": 725,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 421808,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 5,
+              "team": "blue",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2425429216,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:12:50+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425429338,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:13:25+00:00",
+      "user_id": 10212942
+    },
+    {
+      "id": 2425429361,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:13:31+00:00",
+      "user_id": 6643511
+    },
+    {
+      "id": 2425429374,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:13:35+00:00",
+      "user_id": 11582986
+    },
+    {
+      "id": 2425429380,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:13:37+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425429411,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:13:45+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425429561,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:14:25+00:00",
+      "user_id": 17791142
+    },
+    {
+      "id": 2425429577,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:14:28+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425429598,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:14:31+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425429629,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:14:38+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425429689,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:14:56+00:00",
+      "user_id": 17791142
+    },
+    {
+      "id": 2425429792,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:15:25+00:00",
+      "user_id": 5132353
+    },
+    {
+      "id": 2425429809,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:15:27+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425429834,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:15:31+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425429877,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:15:39+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425429905,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:15:45+00:00",
+      "user_id": 11983880
+    },
+    {
+      "id": 2425429940,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:15:54+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425430086,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:16:33+00:00",
+      "user_id": 6643511
+    },
+    {
+      "id": 2425430097,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:16:35+00:00",
+      "user_id": 11582986
+    },
+    {
+      "id": 2425430100,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:16:36+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425430133,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:16:45+00:00",
+      "user_id": 11983880
+    },
+    {
+      "id": 2425430158,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:16:52+00:00",
+      "user_id": 11582986
+    },
+    {
+      "id": 2425430293,
+      "detail": {
+        "type": "other",
+        "text": "BLB: (Hessen) vs (Berlin)"
+      },
+      "timestamp": "2025-03-16T16:17:26+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 40017,
+        "id": 613462984,
+        "start_time": "2025-03-16T16:17:26Z",
+        "end_time": "2025-03-16T16:18:56Z",
+        "match_id": 117500384,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "team-vs",
+        "mods": [
+          "NF"
+        ],
+        "beatmap": {
+          "beatmapset_id": 10112,
+          "difficulty_rating": 6.19967,
+          "id": 40017,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "ranked",
+          "total_length": 78,
+          "user_id": 44308,
+          "version": "Oni",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "Niko",
+            "artist_unicode": "Niko",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/10112/covers/cover.jpg?1650602847",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/10112/covers/cover@2x.jpg?1650602847",
+              "card": "https://assets.ppy.sh/beatmaps/10112/covers/card.jpg?1650602847",
+              "card@2x": "https://assets.ppy.sh/beatmaps/10112/covers/card@2x.jpg?1650602847",
+              "list": "https://assets.ppy.sh/beatmaps/10112/covers/list.jpg?1650602847",
+              "list@2x": "https://assets.ppy.sh/beatmaps/10112/covers/list@2x.jpg?1650602847",
+              "slimcover": "https://assets.ppy.sh/beatmaps/10112/covers/slimcover.jpg?1650602847",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/10112/covers/slimcover@2x.jpg?1650602847"
+            },
+            "creator": "lesjuh",
+            "favourite_count": 1703,
+            "genre_id": 2,
+            "hype": null,
+            "id": 10112,
+            "language_id": 2,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 5995857,
+            "preview_url": "https://b.ppy.sh/preview/10112.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "ranked",
+            "title": "Made of Fire",
+            "title_unicode": "Made of Fire",
+            "track_id": null,
+            "user_id": 44308,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 3,
+              "great": 398,
+              "ok": 10,
+              "meh": 1
+            },
+            "beatmap_id": 40017,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 7780605,
+            "accuracy": 0.9745145631067961,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:17:26Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 533998,
+            "max_combo": 284,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 533998,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 17,
+              "great": 368,
+              "ok": 20,
+              "meh": 7
+            },
+            "beatmap_id": 40017,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 13627426,
+            "accuracy": 0.9122168284789643,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:17:26Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 342339,
+            "max_combo": 260,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 342339,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 7,
+              "great": 385,
+              "ok": 17,
+              "meh": 3
+            },
+            "beatmap_id": 40017,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11983880,
+            "accuracy": 0.9494336569579288,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:17:26Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 466497,
+            "max_combo": 289,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 466497,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 2,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 10,
+              "great": 382,
+              "ok": 14,
+              "meh": 6
+            },
+            "beatmap_id": 40017,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 4280363,
+            "accuracy": 0.9409385113268608,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:17:26Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 338862,
+            "max_combo": 180,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 338862,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 3,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 7,
+              "great": 383,
+              "ok": 20,
+              "meh": 2
+            },
+            "beatmap_id": 40017,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 16727203,
+            "accuracy": 0.9466019417475728,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:17:26Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 518053,
+            "max_combo": 330,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 518053,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 4,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 7,
+              "great": 390,
+              "ok": 12,
+              "meh": 3
+            },
+            "beatmap_id": 40017,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 19857248,
+            "accuracy": 0.9575242718446602,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:17:26Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 388109,
+            "max_combo": 210,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 388109,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 5,
+              "team": "blue",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2425430650,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:19:10+00:00",
+      "user_id": 5132353
+    },
+    {
+      "id": 2425430993,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:20:49+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425431027,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:20:57+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425431028,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:20:58+00:00",
+      "user_id": 19857248
+    },
+    {
+      "id": 2425431068,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:21:09+00:00",
+      "user_id": 11983880
+    },
+    {
+      "id": 2425431117,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:21:20+00:00",
+      "user_id": 6643511
+    },
+    {
+      "id": 2425431135,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:21:26+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425431224,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:21:59+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425431345,
+      "detail": {
+        "type": "other",
+        "text": "BLB: (Hessen) vs (Berlin)"
+      },
+      "timestamp": "2025-03-16T16:22:37+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 4566200,
+        "id": 613463342,
+        "start_time": "2025-03-16T16:22:37Z",
+        "end_time": "2025-03-16T16:25:59Z",
+        "match_id": 117500384,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "team-vs",
+        "mods": [
+          "NF",
+          "HR"
+        ],
+        "beatmap": {
+          "beatmapset_id": 2164734,
+          "difficulty_rating": 6.68887,
+          "id": 4566200,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "ranked",
+          "total_length": 191,
+          "user_id": 8095457,
+          "version": "Memorable Journeys",
+          "beatmapset": {
+            "anime_cover": true,
+            "artist": "YOASOBI",
+            "artist_unicode": "YOASOBI",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/2164734/covers/cover.jpg?1717335731",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/2164734/covers/cover@2x.jpg?1717335731",
+              "card": "https://assets.ppy.sh/beatmaps/2164734/covers/card.jpg?1717335731",
+              "card@2x": "https://assets.ppy.sh/beatmaps/2164734/covers/card@2x.jpg?1717335731",
+              "list": "https://assets.ppy.sh/beatmaps/2164734/covers/list.jpg?1717335731",
+              "list@2x": "https://assets.ppy.sh/beatmaps/2164734/covers/list@2x.jpg?1717335731",
+              "slimcover": "https://assets.ppy.sh/beatmaps/2164734/covers/slimcover.jpg?1717335731",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/2164734/covers/slimcover@2x.jpg?1717335731"
+            },
+            "creator": "dkblaze",
+            "favourite_count": 249,
+            "genre_id": 5,
+            "hype": null,
+            "id": 2164734,
+            "language_id": 3,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 186512,
+            "preview_url": "https://b.ppy.sh/preview/2164734.mp3",
+            "source": "葬送のフリーレン",
+            "spotlight": false,
+            "status": "ranked",
+            "title": "Yuusha",
+            "title_unicode": "勇者",
+            "track_id": null,
+            "user_id": 8095457,
+            "video": true
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "great": 914,
+              "ok": 27
+            },
+            "beatmap_id": 4566200,
+            "best_id": null,
+            "id": null,
+            "rank": "S",
+            "type": "legacy_match_score",
+            "user_id": 7780605,
+            "accuracy": 0.9808714133900106,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:22:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 1028501,
+            "max_combo": 1291,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 1028501,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 5,
+              "great": 917,
+              "ok": 18,
+              "meh": 1
+            },
+            "beatmap_id": 4566200,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 13627426,
+            "accuracy": 0.9810485299326958,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:22:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 504336,
+            "max_combo": 575,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 504336,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 5,
+              "great": 870,
+              "ok": 63,
+              "meh": 3
+            },
+            "beatmap_id": 4566200,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 6643511,
+            "accuracy": 0.9473963868225292,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:22:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 408513,
+            "max_combo": 528,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 408513,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 2,
+              "team": "red",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 1,
+              "great": 894,
+              "ok": 44,
+              "meh": 2
+            },
+            "beatmap_id": 4566200,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 5132353,
+            "accuracy": 0.9659936238044633,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:22:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 494469,
+            "max_combo": 595,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 494469,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 3,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "great": 898,
+              "ok": 42,
+              "meh": 1
+            },
+            "beatmap_id": 4566200,
+            "best_id": null,
+            "id": null,
+            "rank": "S",
+            "type": "legacy_match_score",
+            "user_id": 16727203,
+            "accuracy": 0.96935883811548,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:22:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 813856,
+            "max_combo": 1108,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 813856,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 4,
+              "team": "blue",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 2,
+              "great": 898,
+              "ok": 38,
+              "meh": 3
+            },
+            "beatmap_id": 4566200,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 4280363,
+            "accuracy": 0.9682961388593695,
+            "build_id": null,
+            "ended_at": "2025-03-16T16:22:37Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 516504,
+            "max_combo": 550,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 516504,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 5,
+              "team": "blue",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2425432113,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-16T16:26:08+00:00",
+      "user_id": 17791142
+    },
+    {
+      "id": 2425432148,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:26:21+00:00",
+      "user_id": 16727203
+    },
+    {
+      "id": 2425432157,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:26:24+00:00",
+      "user_id": 6643511
+    },
+    {
+      "id": 2425432169,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:26:27+00:00",
+      "user_id": 4280363
+    },
+    {
+      "id": 2425432173,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:26:29+00:00",
+      "user_id": 17791142
+    },
+    {
+      "id": 2425432209,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:26:39+00:00",
+      "user_id": 5132353
+    },
+    {
+      "id": 2425432243,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:26:45+00:00",
+      "user_id": 13627426
+    },
+    {
+      "id": 2425432269,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-16T16:26:54+00:00",
+      "user_id": 7780605
+    },
+    {
+      "id": 2425432532,
+      "detail": {
+        "type": "match-disbanded"
+      },
+      "timestamp": "2025-03-16T16:28:03+00:00",
+      "user_id": null
+    }
+  ],
+  "users": [
+    {
+      "avatar_url": "https://a.ppy.sh/4191188?1642974906.png",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 4191188,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": false,
+      "last_visit": "2026-09-23T16:33:26+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "Flevius",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/4280363?1784504170.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 4280363,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": true,
+      "last_visit": null,
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "x3Lydiia",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/5132353?1755378871.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 5132353,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": false,
+      "last_visit": "2026-09-23T15:26:36+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "[ Nano ]",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/6643511?1760634226.png",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 6643511,
+      "is_active": false,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": false,
+      "last_visit": "2026-06-23T19:40:29+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "tplc",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/7780605?1765994018.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 7780605,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": true,
+      "is_supporter": true,
+      "last_visit": "2026-09-23T17:28:22+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "Fleh",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/10212942?1761073439.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 10212942,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": true,
+      "is_supporter": true,
+      "last_visit": "2026-09-23T17:27:46+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "Katharsis",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/11495128?1789777001.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 11495128,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": true,
+      "last_visit": "2026-09-23T13:14:07+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "Ji2zie",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/11582986?1782327391.png",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 11582986,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": false,
+      "last_visit": "2026-09-22T18:19:47+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "Kyube",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/11983880?1782463742.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 11983880,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": false,
+      "last_visit": "2026-09-16T16:34:46+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "Haj",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/13627426?1775941820.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 13627426,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": true,
+      "last_visit": "2026-09-22T16:01:03+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "mort",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/16727203?1786117523.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 16727203,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": true,
+      "last_visit": "2026-09-23T13:33:13+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "Freakmaster",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/17791142?1748982374.png",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 17791142,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": false,
+      "last_visit": null,
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "giewar",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/19857248?1789031954.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 19857248,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": false,
+      "last_visit": "2026-09-23T07:21:16+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "Herazu",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    }
+  ],
+  "first_event_id": 2425417127,
+  "latest_event_id": 2425432532,
+  "current_game_id": null
+}

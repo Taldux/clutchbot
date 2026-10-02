@@ -1,0 +1,43 @@
+<!doctype html>
+{% import "_parts.html" as parts %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/static/card.css">
+  <link rel="stylesheet" href="/static/result.css">
+</head>
+<body>
+<main class="card">
+  {{ parts.top(card) }}
+  {{ parts.scoreline(card) }}
+
+  <section class="rosters">
+    {% for player in [card.red, card.blue] %}
+    <div class="roster stats {{ player.side }}">
+      <div class="panel-top">
+        {{ parts.avatar(player.avatar_url, "large") }}
+        <div class="big-cost{% if player.has_best_cost %} best{% endif %}">
+          <span class="value">{{ player.cost }}</span>
+          <span class="label">Match cost</span>
+        </div>
+      </div>
+      <div class="stat">
+        <span class="muted">Average score</span>
+        <span>{{ player.average_score }}</span>
+      </div>
+      <div class="stat">
+        <span class="muted">Average accuracy</span>
+        <span>{{ player.average_accuracy }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  {% if card.cost_ratio %}
+  {{ parts.footer(card, "Performance difference " ~ card.cost_ratio ~ "×") }}
+  {% else %}
+  {{ parts.footer(card) }}
+  {% endif %}
+</main>
+</body>
+</html>

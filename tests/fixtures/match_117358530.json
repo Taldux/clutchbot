@@ -1,0 +1,1766 @@
+{
+  "match": {
+    "id": 117358530,
+    "start_time": "2025-03-02T17:10:39+00:00",
+    "end_time": "2025-03-02T18:04:56+00:00",
+    "name": "DBHS: (NINERIK) vs (Welter)"
+  },
+  "events": [
+    {
+      "id": 2422486730,
+      "detail": {
+        "type": "match-created"
+      },
+      "timestamp": "2025-03-02T17:10:39+00:00",
+      "user_id": 6496016
+    },
+    {
+      "id": 2422486903,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-02T17:11:17+00:00",
+      "user_id": 11552867
+    },
+    {
+      "id": 2422486986,
+      "detail": {
+        "type": "player-joined"
+      },
+      "timestamp": "2025-03-02T17:11:46+00:00",
+      "user_id": 10549880
+    },
+    {
+      "id": 2422487724,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:15:01+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 4474758,
+        "id": 612535781,
+        "start_time": "2025-03-02T17:15:01Z",
+        "end_time": "2025-03-02T17:17:19Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF",
+          "DT"
+        ],
+        "beatmap": {
+          "beatmapset_id": 1087958,
+          "difficulty_rating": 6.01627,
+          "id": 4474758,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "ranked",
+          "total_length": 192,
+          "user_id": 8165181,
+          "version": "endless paradise in the heavens",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "paranoid void",
+            "artist_unicode": "paranoid void",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/1087958/covers/cover.jpg?1717140362",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/1087958/covers/cover@2x.jpg?1717140362",
+              "card": "https://assets.ppy.sh/beatmaps/1087958/covers/card.jpg?1717140362",
+              "card@2x": "https://assets.ppy.sh/beatmaps/1087958/covers/card@2x.jpg?1717140362",
+              "list": "https://assets.ppy.sh/beatmaps/1087958/covers/list.jpg?1717140362",
+              "list@2x": "https://assets.ppy.sh/beatmaps/1087958/covers/list@2x.jpg?1717140362",
+              "slimcover": "https://assets.ppy.sh/beatmaps/1087958/covers/slimcover.jpg?1717140362",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/1087958/covers/slimcover@2x.jpg?1717140362"
+            },
+            "creator": "revoh",
+            "favourite_count": 99,
+            "genre_id": 4,
+            "hype": null,
+            "id": 1087958,
+            "language_id": 5,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 20803,
+            "preview_url": "https://b.ppy.sh/preview/1087958.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "ranked",
+            "title": "Foamy Sky, Eternal City",
+            "title_unicode": "泡沫の空、永遠の街",
+            "track_id": null,
+            "user_id": 8165181,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "DT"
+              }
+            ],
+            "statistics": {
+              "miss": 9,
+              "great": 692,
+              "ok": 42,
+              "meh": 4
+            },
+            "beatmap_id": 4474758,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.9460062472110665,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:15:01Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 368958,
+            "max_combo": 258,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 368958,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "DT"
+              }
+            ],
+            "statistics": {
+              "miss": 35,
+              "great": 607,
+              "ok": 80,
+              "meh": 25
+            },
+            "beatmap_id": 4474758,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.8538598839803659,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:15:01Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 139417,
+            "max_combo": 185,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 139417,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422488491,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:18:42+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 3290808,
+        "id": 612536034,
+        "start_time": "2025-03-02T17:18:42Z",
+        "end_time": "2025-03-02T17:21:01Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF",
+          "HR"
+        ],
+        "beatmap": {
+          "beatmapset_id": 1611819,
+          "difficulty_rating": 8.3805,
+          "id": 3290808,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 128,
+          "user_id": 19048,
+          "version": "Delete The Galaxy",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "Kobaryo feat. HiTNEX-X",
+            "artist_unicode": "Kobaryo feat. HiTNEX-X",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/1611819/covers/cover.jpg?1789063208",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/1611819/covers/cover@2x.jpg?1789063208",
+              "card": "https://assets.ppy.sh/beatmaps/1611819/covers/card.jpg?1789063208",
+              "card@2x": "https://assets.ppy.sh/beatmaps/1611819/covers/card@2x.jpg?1789063208",
+              "list": "https://assets.ppy.sh/beatmaps/1611819/covers/list.jpg?1789063208",
+              "list@2x": "https://assets.ppy.sh/beatmaps/1611819/covers/list@2x.jpg?1789063208",
+              "slimcover": "https://assets.ppy.sh/beatmaps/1611819/covers/slimcover.jpg?1789063208",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/1611819/covers/slimcover@2x.jpg?1789063208"
+            },
+            "creator": "Blue Dragon",
+            "favourite_count": 51,
+            "genre_id": 10,
+            "hype": null,
+            "id": 1611819,
+            "language_id": 2,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 15103,
+            "preview_url": "https://b.ppy.sh/preview/1611819.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "SUPER REACTOR",
+            "title_unicode": "SUPER REACTOR",
+            "track_id": null,
+            "user_id": 19048,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 35,
+              "great": 641,
+              "ok": 73,
+              "meh": 15
+            },
+            "beatmap_id": 3290808,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.8741273996509599,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:18:42Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 154368,
+            "max_combo": 195,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 154368,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 27,
+              "great": 676,
+              "ok": 55,
+              "meh": 6
+            },
+            "beatmap_id": 3290808,
+            "best_id": null,
+            "id": null,
+            "rank": "B",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.9101221640488656,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:18:42Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 233430,
+            "max_combo": 266,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 233430,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422489150,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:22:06+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 4309650,
+        "id": 612536272,
+        "start_time": "2025-03-02T17:22:06Z",
+        "end_time": "2025-03-02T17:24:22Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF"
+        ],
+        "beatmap": {
+          "beatmapset_id": 2061506,
+          "difficulty_rating": 8.1131,
+          "id": 4309650,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 127,
+          "user_id": 9157301,
+          "version": "Pudding Chase",
+          "beatmapset": {
+            "anime_cover": true,
+            "artist": "Umeboshi Chazuke",
+            "artist_unicode": "梅干茶漬け",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/2061506/covers/cover.jpg?1697292134",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/2061506/covers/cover@2x.jpg?1697292134",
+              "card": "https://assets.ppy.sh/beatmaps/2061506/covers/card.jpg?1697292134",
+              "card@2x": "https://assets.ppy.sh/beatmaps/2061506/covers/card@2x.jpg?1697292134",
+              "list": "https://assets.ppy.sh/beatmaps/2061506/covers/list.jpg?1697292134",
+              "list@2x": "https://assets.ppy.sh/beatmaps/2061506/covers/list@2x.jpg?1697292134",
+              "slimcover": "https://assets.ppy.sh/beatmaps/2061506/covers/slimcover.jpg?1697292134",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/2061506/covers/slimcover@2x.jpg?1697292134"
+            },
+            "creator": "syuq",
+            "favourite_count": 3,
+            "genre_id": 1,
+            "hype": null,
+            "id": 2061506,
+            "language_id": 1,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 2262,
+            "preview_url": "https://b.ppy.sh/preview/2061506.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "Dotabata Oikakekko Boy!",
+            "title_unicode": "ドタバタおいかけっこボーイ！",
+            "track_id": null,
+            "user_id": 9157301,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 82,
+              "great": 726,
+              "ok": 72,
+              "meh": 45
+            },
+            "beatmap_id": 4309650,
+            "best_id": null,
+            "id": null,
+            "rank": "C",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.8189189189189189,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:22:06Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 90463,
+            "max_combo": 199,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 90463,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 151,
+              "great": 572,
+              "ok": 133,
+              "meh": 69
+            },
+            "beatmap_id": 4309650,
+            "best_id": null,
+            "id": null,
+            "rank": "C",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.6787387387387387,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:22:06Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 33559,
+            "max_combo": 111,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 33559,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422489971,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:25:45+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 2656142,
+        "id": 612536535,
+        "start_time": "2025-03-02T17:25:45Z",
+        "end_time": "2025-03-02T17:28:01Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF"
+        ],
+        "beatmap": {
+          "beatmapset_id": 1278549,
+          "difficulty_rating": 9.71775,
+          "id": 2656142,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 127,
+          "user_id": 7184125,
+          "version": "Extra",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "Jin Yan Xie",
+            "artist_unicode": "谢金燕",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/1278549/covers/cover.jpg?1748703619",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/1278549/covers/cover@2x.jpg?1748703619",
+              "card": "https://assets.ppy.sh/beatmaps/1278549/covers/card.jpg?1748703619",
+              "card@2x": "https://assets.ppy.sh/beatmaps/1278549/covers/card@2x.jpg?1748703619",
+              "list": "https://assets.ppy.sh/beatmaps/1278549/covers/list.jpg?1748703619",
+              "list@2x": "https://assets.ppy.sh/beatmaps/1278549/covers/list@2x.jpg?1748703619",
+              "slimcover": "https://assets.ppy.sh/beatmaps/1278549/covers/slimcover.jpg?1748703619",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/1278549/covers/slimcover@2x.jpg?1748703619"
+            },
+            "creator": "None1637",
+            "favourite_count": 39,
+            "genre_id": 1,
+            "hype": null,
+            "id": 1278549,
+            "language_id": 1,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 27975,
+            "preview_url": "https://b.ppy.sh/preview/1278549.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "Dancing Kong Fu (Nightcore Mix)",
+            "title_unicode": "练舞功 (Nightcore Mix)",
+            "track_id": null,
+            "user_id": 7184125,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 61,
+              "great": 854,
+              "ok": 10,
+              "meh": 8
+            },
+            "beatmap_id": 2656142,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.9203286888174348,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:25:45Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 191839,
+            "max_combo": 159,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 191839,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              }
+            ],
+            "statistics": {
+              "miss": 43,
+              "great": 874,
+              "ok": 9,
+              "meh": 7
+            },
+            "beatmap_id": 2656142,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.9412290103608432,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:25:45Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 223308,
+            "max_combo": 172,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 223308,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422490706,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:29:06+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 4720250,
+        "id": 612536775,
+        "start_time": "2025-03-02T17:29:06Z",
+        "end_time": "2025-03-02T17:30:40Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF",
+          "DT"
+        ],
+        "beatmap": {
+          "beatmapset_id": 2225356,
+          "difficulty_rating": 6.93872,
+          "id": 4720250,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 126,
+          "user_id": 418699,
+          "version": "Another",
+          "beatmapset": {
+            "anime_cover": true,
+            "artist": "Snail's House",
+            "artist_unicode": "Snail's House",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/2225356/covers/cover.jpg?1725129015",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/2225356/covers/cover@2x.jpg?1725129015",
+              "card": "https://assets.ppy.sh/beatmaps/2225356/covers/card.jpg?1725129015",
+              "card@2x": "https://assets.ppy.sh/beatmaps/2225356/covers/card@2x.jpg?1725129015",
+              "list": "https://assets.ppy.sh/beatmaps/2225356/covers/list.jpg?1725129015",
+              "list@2x": "https://assets.ppy.sh/beatmaps/2225356/covers/list@2x.jpg?1725129015",
+              "slimcover": "https://assets.ppy.sh/beatmaps/2225356/covers/slimcover.jpg?1725129015",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/2225356/covers/slimcover@2x.jpg?1725129015"
+            },
+            "creator": "fanzhen0019",
+            "favourite_count": 6,
+            "genre_id": 10,
+            "hype": null,
+            "id": 2225356,
+            "language_id": 5,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 1260,
+            "preview_url": "https://b.ppy.sh/preview/2225356.mp3",
+            "source": "beatmania IIDX 26 Rootage",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "Okashi no Oukoku",
+            "title_unicode": "お菓子の王国",
+            "track_id": null,
+            "user_id": 418699,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "DT"
+              }
+            ],
+            "statistics": {
+              "miss": 19,
+              "great": 757,
+              "ok": 43,
+              "meh": 16
+            },
+            "beatmap_id": 4720250,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.9269461077844311,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:29:06Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 262250,
+            "max_combo": 262,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 262250,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "DT"
+              }
+            ],
+            "statistics": {
+              "miss": 16,
+              "great": 759,
+              "ok": 48,
+              "meh": 12
+            },
+            "beatmap_id": 4720250,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.9305389221556887,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:29:06Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 274517,
+            "max_combo": 210,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 274517,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422491339,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:32:02+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 2987383,
+        "id": 612536994,
+        "start_time": "2025-03-02T17:32:02Z",
+        "end_time": "2025-03-02T17:35:49Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF",
+          "HR"
+        ],
+        "beatmap": {
+          "beatmapset_id": 1453046,
+          "difficulty_rating": 9.22813,
+          "id": 2987383,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 235,
+          "user_id": 19048,
+          "version": "chilblain",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "Renard",
+            "artist_unicode": "Renard",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/1453046/covers/cover.jpg?1666373437",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/1453046/covers/cover@2x.jpg?1666373437",
+              "card": "https://assets.ppy.sh/beatmaps/1453046/covers/card.jpg?1666373437",
+              "card@2x": "https://assets.ppy.sh/beatmaps/1453046/covers/card@2x.jpg?1666373437",
+              "list": "https://assets.ppy.sh/beatmaps/1453046/covers/list.jpg?1666373437",
+              "list@2x": "https://assets.ppy.sh/beatmaps/1453046/covers/list@2x.jpg?1666373437",
+              "slimcover": "https://assets.ppy.sh/beatmaps/1453046/covers/slimcover.jpg?1666373437",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/1453046/covers/slimcover@2x.jpg?1666373437"
+            },
+            "creator": "Mismagius",
+            "favourite_count": 39,
+            "genre_id": 10,
+            "hype": null,
+            "id": 1453046,
+            "language_id": 2,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 4517,
+            "preview_url": "https://b.ppy.sh/preview/1453046.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "Where Can I Go (feat. Adraen)",
+            "title_unicode": "Where Can I Go (feat. Adraen)",
+            "track_id": null,
+            "user_id": 19048,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 48,
+              "great": 1224,
+              "ok": 39,
+              "meh": 24
+            },
+            "beatmap_id": 2987383,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.9295880149812734,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:32:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 236925,
+            "max_combo": 479,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 236925,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 37,
+              "great": 1247,
+              "ok": 27,
+              "meh": 24
+            },
+            "beatmap_id": 2987383,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.9438202247191011,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:32:02Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 244827,
+            "max_combo": 375,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 244827,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422492450,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:36:41+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 1414762,
+        "id": 612537330,
+        "start_time": "2025-03-02T17:36:41Z",
+        "end_time": "2025-03-02T17:41:03Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF",
+          "DT"
+        ],
+        "beatmap": {
+          "beatmapset_id": 668799,
+          "difficulty_rating": 6.16967,
+          "id": 1414762,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "ranked",
+          "total_length": 367,
+          "user_id": 896613,
+          "version": "Hymn",
+          "beatmapset": {
+            "anime_cover": true,
+            "artist": "Shimotsuki Haruka",
+            "artist_unicode": "霜月はるか",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/668799/covers/cover.jpg?1622125009",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/668799/covers/cover@2x.jpg?1622125009",
+              "card": "https://assets.ppy.sh/beatmaps/668799/covers/card.jpg?1622125009",
+              "card@2x": "https://assets.ppy.sh/beatmaps/668799/covers/card@2x.jpg?1622125009",
+              "list": "https://assets.ppy.sh/beatmaps/668799/covers/list.jpg?1622125009",
+              "list@2x": "https://assets.ppy.sh/beatmaps/668799/covers/list@2x.jpg?1622125009",
+              "slimcover": "https://assets.ppy.sh/beatmaps/668799/covers/slimcover.jpg?1622125009",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/668799/covers/slimcover@2x.jpg?1622125009"
+            },
+            "creator": "Lasse",
+            "favourite_count": 319,
+            "genre_id": 11,
+            "hype": null,
+            "id": 668799,
+            "language_id": 3,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 276129,
+            "preview_url": "https://b.ppy.sh/preview/668799.mp3",
+            "source": "アルノサージュ～生まれいずる星へ祈る詩～",
+            "spotlight": false,
+            "status": "ranked",
+            "title": "Hidra Heteromycin",
+            "title_unicode": "Hidra Heteromycin",
+            "track_id": null,
+            "user_id": 896613,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "DT"
+              }
+            ],
+            "statistics": {
+              "miss": 17,
+              "great": 1965,
+              "ok": 146,
+              "meh": 18
+            },
+            "beatmap_id": 1414762,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.9397328362845604,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:36:41Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 389527,
+            "max_combo": 953,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 389527,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "DT"
+              }
+            ],
+            "statistics": {
+              "miss": 202,
+              "great": 1372,
+              "ok": 476,
+              "meh": 96
+            },
+            "beatmap_id": 1414762,
+            "best_id": null,
+            "id": null,
+            "rank": "C",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.7207207207207207,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:36:41Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 82636,
+            "max_combo": 690,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 82636,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422493846,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:43:10+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 4994194,
+        "id": 612537788,
+        "start_time": "2025-03-02T17:43:10Z",
+        "end_time": "2025-03-02T17:45:54Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF",
+          "DT"
+        ],
+        "beatmap": {
+          "beatmapset_id": 2094121,
+          "difficulty_rating": 6.90987,
+          "id": 4994194,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 232,
+          "user_id": 3958619,
+          "version": "Suddenly Reading Map",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "KOTOKO",
+            "artist_unicode": "KOTOKO",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/2094121/covers/cover.jpg?1742745642",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/2094121/covers/cover@2x.jpg?1742745642",
+              "card": "https://assets.ppy.sh/beatmaps/2094121/covers/card.jpg?1742745642",
+              "card@2x": "https://assets.ppy.sh/beatmaps/2094121/covers/card@2x.jpg?1742745642",
+              "list": "https://assets.ppy.sh/beatmaps/2094121/covers/list.jpg?1742745642",
+              "list@2x": "https://assets.ppy.sh/beatmaps/2094121/covers/list@2x.jpg?1742745642",
+              "slimcover": "https://assets.ppy.sh/beatmaps/2094121/covers/slimcover.jpg?1742745642",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/2094121/covers/slimcover@2x.jpg?1742745642"
+            },
+            "creator": "D I O",
+            "favourite_count": 2,
+            "genre_id": 1,
+            "hype": null,
+            "id": 2094121,
+            "language_id": 1,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 545,
+            "preview_url": "https://b.ppy.sh/preview/2094121.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "Oboetete Ii yo",
+            "title_unicode": "覚えてていいよ",
+            "track_id": null,
+            "user_id": 3958619,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "DT"
+              }
+            ],
+            "statistics": {
+              "miss": 24,
+              "great": 989,
+              "ok": 35,
+              "meh": 9
+            },
+            "beatmap_id": 4994194,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.9481236203090507,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:43:10Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 341907,
+            "max_combo": 355,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 341907,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "DT"
+              }
+            ],
+            "statistics": {
+              "miss": 24,
+              "great": 996,
+              "ok": 36,
+              "meh": 1
+            },
+            "beatmap_id": 4994194,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.9538000630715863,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:43:10Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 349141,
+            "max_combo": 252,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 349141,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422494928,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:47:42+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 2165744,
+        "id": 612538115,
+        "start_time": "2025-03-02T17:47:42Z",
+        "end_time": "2025-03-02T17:50:59Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF",
+          "HD"
+        ],
+        "beatmap": {
+          "beatmapset_id": 1035902,
+          "difficulty_rating": 9.57917,
+          "id": 2165744,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 187,
+          "user_id": 3827077,
+          "version": "Terminal Velocity",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "YZYX",
+            "artist_unicode": "YZYX",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/1035902/covers/cover.jpg?1772090934",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/1035902/covers/cover@2x.jpg?1772090934",
+              "card": "https://assets.ppy.sh/beatmaps/1035902/covers/card.jpg?1772090934",
+              "card@2x": "https://assets.ppy.sh/beatmaps/1035902/covers/card@2x.jpg?1772090934",
+              "list": "https://assets.ppy.sh/beatmaps/1035902/covers/list.jpg?1772090934",
+              "list@2x": "https://assets.ppy.sh/beatmaps/1035902/covers/list@2x.jpg?1772090934",
+              "slimcover": "https://assets.ppy.sh/beatmaps/1035902/covers/slimcover.jpg?1772090934",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/1035902/covers/slimcover@2x.jpg?1772090934"
+            },
+            "creator": "Raikozen",
+            "favourite_count": 34,
+            "genre_id": 1,
+            "hype": null,
+            "id": 1035902,
+            "language_id": 1,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 3475,
+            "preview_url": "https://b.ppy.sh/preview/1035902.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "Trapped in a vortex!",
+            "title_unicode": "Trapped in a vortex!",
+            "track_id": null,
+            "user_id": 3827077,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 18,
+              "great": 1344,
+              "ok": 23,
+              "meh": 15
+            },
+            "beatmap_id": 2165744,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.9672619047619048,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:47:42Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 303794,
+            "max_combo": 529,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 303794,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HD"
+              }
+            ],
+            "statistics": {
+              "miss": 23,
+              "great": 1304,
+              "ok": 59,
+              "meh": 14
+            },
+            "beatmap_id": 2165744,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.9471428571428572,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:47:42Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 355468,
+            "max_combo": 918,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 355468,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422496046,
+      "detail": {
+        "type": "other",
+        "text": "DBHS: (NINERIK) vs (Welter)"
+      },
+      "timestamp": "2025-03-02T17:53:01+00:00",
+      "user_id": null,
+      "game": {
+        "beatmap_id": 1483687,
+        "id": 612538470,
+        "start_time": "2025-03-02T17:53:01Z",
+        "end_time": "2025-03-02T17:58:35Z",
+        "match_id": 117358530,
+        "mode": "osu",
+        "mode_int": 0,
+        "scoring_type": "scorev2",
+        "team_type": "head-to-head",
+        "mods": [
+          "NF",
+          "HR"
+        ],
+        "beatmap": {
+          "beatmapset_id": 700921,
+          "difficulty_rating": 8.67666,
+          "id": 1483687,
+          "lazer_only": false,
+          "mode": "osu",
+          "status": "graveyard",
+          "total_length": 320,
+          "user_id": 7322726,
+          "version": "Desolation",
+          "beatmapset": {
+            "anime_cover": false,
+            "artist": "Gram VS Camellia",
+            "artist_unicode": "Gram VS かめりあ",
+            "covers": {
+              "cover": "https://assets.ppy.sh/beatmaps/700921/covers/cover.jpg?1772657500",
+              "cover@2x": "https://assets.ppy.sh/beatmaps/700921/covers/cover@2x.jpg?1772657500",
+              "card": "https://assets.ppy.sh/beatmaps/700921/covers/card.jpg?1772657500",
+              "card@2x": "https://assets.ppy.sh/beatmaps/700921/covers/card@2x.jpg?1772657500",
+              "list": "https://assets.ppy.sh/beatmaps/700921/covers/list.jpg?1772657500",
+              "list@2x": "https://assets.ppy.sh/beatmaps/700921/covers/list@2x.jpg?1772657500",
+              "slimcover": "https://assets.ppy.sh/beatmaps/700921/covers/slimcover.jpg?1772657500",
+              "slimcover@2x": "https://assets.ppy.sh/beatmaps/700921/covers/slimcover@2x.jpg?1772657500"
+            },
+            "creator": "lcfc",
+            "favourite_count": 26,
+            "genre_id": 1,
+            "hype": null,
+            "id": 700921,
+            "language_id": 1,
+            "nsfw": false,
+            "offset": 0,
+            "play_count": 2215,
+            "preview_url": "https://b.ppy.sh/preview/700921.mp3",
+            "source": "",
+            "spotlight": false,
+            "status": "graveyard",
+            "title": "Ragnarok",
+            "title_unicode": "Ragnarok",
+            "track_id": null,
+            "user_id": 7322726,
+            "video": false
+          }
+        },
+        "scores": [
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 13,
+              "great": 1649,
+              "ok": 67,
+              "meh": 20
+            },
+            "beatmap_id": 1483687,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 10549880,
+            "accuracy": 0.9574995235372594,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:53:01Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 340567,
+            "max_combo": 694,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 340567,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 0,
+              "team": "none",
+              "pass": true
+            }
+          },
+          {
+            "maximum_statistics": {
+              "miss": 0
+            },
+            "mods": [
+              {
+                "acronym": "NF"
+              },
+              {
+                "acronym": "HR"
+              }
+            ],
+            "statistics": {
+              "miss": 9,
+              "great": 1653,
+              "ok": 77,
+              "meh": 10
+            },
+            "beatmap_id": 1483687,
+            "best_id": null,
+            "id": null,
+            "rank": "A",
+            "type": "legacy_match_score",
+            "user_id": 11552867,
+            "accuracy": 0.9607394701734324,
+            "build_id": null,
+            "ended_at": "2025-03-02T17:53:01Z",
+            "has_replay": false,
+            "is_perfect_combo": false,
+            "legacy_perfect": false,
+            "legacy_score_id": null,
+            "legacy_total_score": 342711,
+            "max_combo": 596,
+            "passed": true,
+            "pp": null,
+            "ruleset_id": 0,
+            "started_at": null,
+            "total_score": 342711,
+            "replay": false,
+            "current_user_attributes": {
+              "pin": null
+            },
+            "match": {
+              "slot": 1,
+              "team": "none",
+              "pass": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2422497379,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-02T17:58:38+00:00",
+      "user_id": 10549880
+    },
+    {
+      "id": 2422498836,
+      "detail": {
+        "type": "player-left"
+      },
+      "timestamp": "2025-03-02T18:04:52+00:00",
+      "user_id": 11552867
+    },
+    {
+      "id": 2422498857,
+      "detail": {
+        "type": "match-disbanded"
+      },
+      "timestamp": "2025-03-02T18:04:56+00:00",
+      "user_id": null
+    }
+  ],
+  "users": [
+    {
+      "avatar_url": "https://a.ppy.sh/6496016?1753713839.jpeg",
+      "country_code": "DE",
+      "default_group": "default",
+      "id": 6496016,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": false,
+      "last_visit": "2026-09-17T09:56:31+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "TheHunter1",
+      "country": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/10549880?1789935432.png",
+      "country_code": "NO",
+      "default_group": "default",
+      "id": 10549880,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": true,
+      "last_visit": "2026-09-23T10:39:35+00:00",
+      "pm_friends_only": true,
+      "profile_colour": null,
+      "username": "NINERIK",
+      "country": {
+        "code": "NO",
+        "name": "Norway"
+      }
+    },
+    {
+      "avatar_url": "https://a.ppy.sh/11552867?1787187873.jpeg",
+      "country_code": "RU",
+      "default_group": "default",
+      "id": 11552867,
+      "is_active": true,
+      "is_bot": false,
+      "is_deleted": false,
+      "is_online": false,
+      "is_supporter": true,
+      "last_visit": "2026-09-22T23:52:17+00:00",
+      "pm_friends_only": false,
+      "profile_colour": null,
+      "username": "Welter",
+      "country": {
+        "code": "RU",
+        "name": "Russian Federation"
+      }
+    }
+  ],
+  "first_event_id": 2422486730,
+  "latest_event_id": 2422498857,
+  "current_game_id": null
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+{% import "_parts.html" as parts %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/static/card.css">
+  <link rel="stylesheet" href="/static/clutch.css">
+</head>
+<body>
+<main class="card">
+  <section class="banner"{% if card.cover_url %} style="--cover: url('{{ card.cover_url }}')"{% endif %}>
+    <div class="banner-top">
+      <div class="label-group">
+        <span class="clutch-label">Clutch moment</span>
+        <span class="map-count">Map {{ card.map_number }} of {{ card.maps_played }}</span>
+      </div>
+      <div class="tournament ellipsis">{{ card.tournament }}</div>
+    </div>
+
+    <div class="banner-bottom">
+      <div class="beatmap">
+        <div class="title{% if card.long_title %} long{% endif %}">{{ card.title }}</div>
+        {% if card.artist or card.version %}
+        <div class="subtitle ellipsis">
+          {{ card.artist }}{% if card.version %} <span class="version">[{{ card.version }}]</span>{% endif %}
+        </div>
+        {% endif %}
+        <div class="tags">
+          {% if card.stars %}<span class="stars">★ {{ card.stars }}</span>{% endif %}
+          {% for mod in card.mods %}<span class="mod">{{ mod }}</span>{% endfor %}
+        </div>
+      </div>
+      <div class="margin">
+        <div class="value">{{ card.margin }}</div>
+        <div class="won-by ellipsis">won by <strong>{{ card.winner_name }}</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sides">
+    {% for side in [card.red, card.blue] %}
+    <div class="side {{ side.side }}{% if side.is_winner %} won{% endif %}">
+      <div class="side-head">
+        <span class="side-name ellipsis">{{ side.name }}</span>
+        <span class="total">{{ side.total }}</span>
+      </div>
+      {% if card.is_head_to_head %}
+        {% for player in side.players %}
+        <div class="stat-line">
+          {{ parts.avatar(player.avatar_url, "medium") }}
+          <span>{{ player.accuracy }}</span>
+          <span>{{ player.combo }}</span>
+          {% if player.mods %}<span class="mod small">{{ player.mods }}</span>{% endif %}
+        </div>
+        {% endfor %}
+      {% else %}
+        {% for player in side.players %}
+        <div class="row">
+          {{ parts.avatar(player.avatar_url, "small") }}
+          <span class="name ellipsis">{{ player.name }}</span>
+          {% if player.mods %}<span class="mod small">{{ player.mods }}</span>{% endif %}
+          <span class="accuracy">{{ player.accuracy }}</span>
+          <span class="score">{{ player.score }}</span>
+        </div>
+        {% endfor %}
+        {% if side.hidden_players %}<div class="more">+{{ side.hidden_players }} more</div>{% endif %}
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+
+  <footer class="bottom">
+    <span class="muted">
+      After this map:
+      <span class="red">{{ card.red.name }} {{ card.red_wins_after }}</span>
+      –
+      <span class="blue">{{ card.blue_wins_after }} {{ card.blue.name }}</span>
+    </span>
+    <span class="muted">{{ card.match_link }} · <span class="brand">ClutchBot</span></span>
+  </footer>
+</main>
+</body>
+</html>

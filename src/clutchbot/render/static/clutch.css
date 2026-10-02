@@ -1,0 +1,268 @@
+/* Clutch card layout (colours and helpers come from card.css) */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 675px;
+}
+
+/* Beatmap cover banner; the gradient doubles as the placeholder without a cover */
+.banner {
+  --cover: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 330px;
+  padding: 28px 48px 24px;
+  background:
+    linear-gradient(to bottom, rgb(21 21 28 / 0.35), rgb(21 21 28 / 0.75) 65%, var(--bg)),
+    var(--cover) center / cover no-repeat,
+    linear-gradient(120deg, #3a2448, #1f2a4a);
+}
+
+.banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.label-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 14px;
+}
+
+.clutch-label {
+  padding: 5px 14px;
+  border-radius: 8px;
+  background: var(--gold);
+  color: var(--bg);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.map-count {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 0.6);
+}
+
+.tournament {
+  color: var(--accent);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 0.6);
+  text-transform: uppercase;
+}
+
+.banner-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.beatmap {
+  min-width: 0;
+}
+
+.title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 0.6);
+}
+
+/* Long titles get smaller and may wrap once before ending in "…" */
+.title.long {
+  -webkit-line-clamp: 2;
+  font-size: 34px;
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-size: 22px;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 0.6);
+}
+
+.version {
+  color: var(--muted);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.stars {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: rgb(255 209 102 / 0.18);
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mod {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.mod.small {
+  flex-shrink: 0;
+  padding: 1px 8px;
+  font-size: 13px;
+}
+
+.margin {
+  flex-shrink: 0;
+  max-width: 380px;
+  text-align: right;
+}
+
+.margin .value {
+  color: var(--gold);
+  font-size: 84px;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 2px 12px rgb(0 0 0 / 0.5);
+}
+
+.won-by {
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+/* Score panels for both sides */
+.sides {
+  display: grid;
+  flex: 1;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  min-height: 0;
+  padding: 18px 48px 0;
+}
+
+.side {
+  overflow: hidden;
+  padding: 14px 22px 10px;
+  border-top: 4px solid;
+  border-radius: 14px;
+  background: var(--panel);
+}
+
+.side.red {
+  border-color: var(--red);
+}
+
+.side.blue {
+  border-color: var(--blue);
+}
+
+.side:not(.won) {
+  opacity: 0.75;
+}
+
+.side-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.side-name {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.side.red .side-name {
+  color: var(--red);
+}
+
+.side.blue .side-name {
+  color: var(--blue);
+}
+
+.total {
+  flex-shrink: 0;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.side.won .total {
+  color: var(--winner);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 32px;
+  font-size: 19px;
+}
+
+.row .name {
+  flex: 1 1 auto;
+}
+
+.accuracy {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.score {
+  flex-shrink: 0;
+  width: 112px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.stat-line {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.more {
+  padding-top: 2px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 48px 20px;
+  font-size: 17px;
+}
+
+.brand {
+  color: var(--accent);
+  font-weight: 800;
+}
