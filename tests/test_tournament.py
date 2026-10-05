@@ -10,7 +10,12 @@ from clutchbot.processing.tournament import (
     parse_tournament_name,
 )
 
-ACRONYMS = {"DBHS": "DBHS Tournament", "CRTOA": "CRTOA Tournament", "BLB": "BLB Tournament"}
+ACRONYMS = {
+    "DBHS": "DBHS Tournament",
+    "CRTOA": "CRTOA Tournament",
+    "BLB": "BLB Tournament",
+    "O!FT10": "osu! finnish tournament 10",
+}
 HESSEN_VS_BERLIN = TournamentName("BLB", "BLB Tournament", "Hessen", "Berlin")
 
 
@@ -34,6 +39,11 @@ HESSEN_VS_BERLIN = TournamentName("BLB", "BLB Tournament", "Hessen", "Berlin")
         (
             "BLB: (Team (A)) vs (B)",
             TournamentName("BLB", "BLB Tournament", "Team (A)", "B"),
+        ),
+        # punctuation in the acronym
+        (
+            "o!ft10: (AllyrD) vs (savilju)",
+            TournamentName("O!FT10", "osu! finnish tournament 10", "AllyrD", "savilju"),
         ),
         # known tournament, but no team names in the usual format
         ("BLB: Grand Finals", TournamentName("BLB", "BLB Tournament", "Red Team", "Blue Team")),
@@ -78,9 +88,9 @@ def write_json(tmp_path: Path, content: object) -> Path:
 
 
 def test_load_acronyms_upper_cases_keys(tmp_path: Path) -> None:
-    path = write_json(tmp_path, {"rt": "Random Tournament", "RT2": " Random Tournament 2 "})
+    path = write_json(tmp_path, {"rt": "Random Tournament", "o!ft10": " osu! finnish tournament "})
 
-    assert load_acronyms(path) == {"RT": "Random Tournament", "RT2": "Random Tournament 2"}
+    assert load_acronyms(path) == {"RT": "Random Tournament", "O!FT10": "osu! finnish tournament"}
 
 
 def test_example_file_loads() -> None:
@@ -108,6 +118,8 @@ def test_invalid_json(tmp_path: Path) -> None:
         (["RT"], "must be a JSON object"),
         ({"RT": 5}, "must be a JSON object"),
         ({"R T": "Random"}, "can't appear before ':'"),
+        ({"A:B": "Random"}, "can't appear before ':'"),
+        ({"(RT)": "Random"}, "can't appear before ':'"),
         ({"RT": "Random", "rt": "Random again"}, "listed twice"),
         ({"RT": "  "}, "empty tournament name"),
     ],

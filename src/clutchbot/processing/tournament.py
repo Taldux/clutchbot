@@ -2,7 +2,9 @@ import re
 from collections.abc import Mapping
 from dataclasses import dataclass
 
-ACRONYM_PATTERN = re.compile(r"^(?P<acronym>[A-Za-z0-9]+):\s*(?P<rest>.*)$")
+# anything but spaces, colon and brackets
+ACRONYM = r"[^\s:()]+"
+ACRONYM_PATTERN = re.compile(rf"^(?P<acronym>{ACRONYM}):\s*(?P<rest>.*)$")
 TEAMS_PATTERN = re.compile(r"^\((?P<red>.+)\)\s+vs\.?\s+\((?P<blue>.+)\)$", re.IGNORECASE)
 
 DEFAULT_RED_TEAM = "Red Team"
@@ -16,6 +18,10 @@ class TournamentName:
     # in 1v1 these are the player names
     red_team: str
     blue_team: str
+
+
+def is_valid_acronym(text: str) -> bool:
+    return re.fullmatch(ACRONYM, text) is not None
 
 
 def parse_tournament_name(match_name: str, acronyms: Mapping[str, str]) -> TournamentName | None:

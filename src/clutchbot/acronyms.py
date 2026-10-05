@@ -5,7 +5,7 @@ from pathlib import Path
 
 from pydantic import TypeAdapter, ValidationError
 
-from clutchbot.processing.tournament import ACRONYM_PATTERN
+from clutchbot.processing.tournament import is_valid_acronym
 
 
 class AcronymsError(Exception):
@@ -45,7 +45,7 @@ def load_acronyms(path: Path) -> dict[str, str]:
 
 def check_entry(key: str, tournament: str) -> tuple[str, str]:
     acronym = key.strip().upper()
-    if ACRONYM_PATTERN.fullmatch(f"{acronym}:") is None:
+    if not is_valid_acronym(acronym):
         raise AcronymsError(f"{key!r} can't appear before ':' in a lobby name")
     if not tournament.strip():
         raise AcronymsError(f"{key!r} has an empty tournament name")

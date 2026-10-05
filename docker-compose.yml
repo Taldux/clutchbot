@@ -3,7 +3,7 @@
 
 services:
   clutchbot:
-    image: ghcr.io/taldux/clutchbot:${CLUTCHBOT_TAG:?set CLUTCHBOT_TAG in .env, e.g. 1.0.0}
+    image: ghcr.io/taldux/clutchbot:${CLUTCHBOT_TAG:?set CLUTCHBOT_TAG in .env, e.g. 1.0.1}
     platform: linux/amd64
     container_name: clutchbot
     restart: unless-stopped
