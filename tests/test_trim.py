@@ -1,7 +1,7 @@
 import pytest
 
-from clutchbot.osu.models import Game
-from clutchbot.processing.trim import SkipReason, is_warmup, trim_games
+from clutchbot.osu.models import Event, EventDetail, Game, MatchDetail, Mod
+from clutchbot.processing.trim import HOST_CHANGED, SkipReason, is_warmup, trim_games
 from tests.conftest import (
     HEAD_TO_HEAD_ID,
     TEAM_VS_ID,
@@ -85,6 +85,64 @@ def test_is_warmup() -> None:
 
     assert not is_warmup(game)
     assert is_warmup(without_nf(game, score_index=1))
+
+
+def with_nf(game: Game) -> Game:
+    scores = [
+        score
+        if "NF" in score.mod_acronyms
+        else score.model_copy(update={"mods": [*score.mods, Mod(acronym="NF")]})
+        for score in game.scores
+    ]
+    return game.model_copy(update={"scores": scores})
+
+
+def with_host_change_after(detail: MatchDetail, game_index: int) -> MatchDetail:
+    events = list(detail.events)
+    position = events.index(next(e for e in events if e.game is detail.games[game_index]))
+    after = events[position]
+    change = Event(
+        id=after.id, detail=EventDetail(type=HOST_CHANGED), timestamp=after.timestamp, user_id=0
+    )
+    events.insert(position + 1, change)
+    return detail.model_copy(update={"events": events})
+
+
+def test_maps_before_the_last_host_change_are_warmups_even_with_nf() -> None:
+    detail = load_detail(WARMUP_MATCH_ID)  # host changes before games 1, 2 and 3
+    changed = replace_games(detail, {0: with_nf(detail.games[0]), 1: with_nf(detail.games[1])})
+
+    trimmed = trim_games(changed)
+
+    assert [s.game for s in trimmed.skipped] == changed.games[:2]
+    assert len(trimmed.games) == 6
+
+
+def test_a_host_change_after_a_real_map_counts_too() -> None:
+    detail = with_host_change_after(load_detail(HEAD_TO_HEAD_ID), 0)
+
+    trimmed = trim_games(detail)
+
+    assert [s.game for s in trimmed.skipped] == detail.games[:1]
+    assert len(trimmed.games) == 9
+
+
+def test_host_changes_later_in_the_match_are_ignored() -> None:
+    detail = load_detail(WARMUP_MATCH_ID)
+    changed = replace_games(detail, {0: with_nf(detail.games[0]), 1: with_nf(detail.games[1])})
+
+    trimmed = trim_games(with_host_change_after(changed, 4))
+
+    assert trimmed.skipped == []
+    assert len(trimmed.games) == 8
+
+
+def test_host_changes_after_the_checked_maps_are_ignored() -> None:
+    detail = with_host_change_after(load_detail(HEAD_TO_HEAD_ID), 1)
+
+    trimmed = trim_games(detail, warmup_games_checked=1)
+
+    assert trimmed.skipped == []
 
 
 def test_a_last_map_without_nf_is_a_tiebreaker_for_fun() -> None:

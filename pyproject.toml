@@ -1,6 +1,6 @@
 [project]
 name = "clutchbot"
-version = "1.0.2"
+version = "1.0.3"
 description = "Twitter bot that posts osu! tournament match results"
 readme = "README.md"
 license = "MIT"
