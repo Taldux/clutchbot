@@ -1,5 +1,6 @@
 import pytest
 
+from clutchbot.osu.models import Game
 from clutchbot.processing.trim import SkipReason, is_warmup, trim_games
 from tests.conftest import (
     HEAD_TO_HEAD_ID,
@@ -94,3 +95,34 @@ def test_a_last_map_without_nf_is_a_tiebreaker_for_fun() -> None:
 
     assert [(s.game, s.reason) for s in trimmed.skipped] == [(last, SkipReason.FUN_TIEBREAKER)]
     assert len(trimmed.games) == 9
+
+
+def with_extra_players(game: Game, count: int) -> Game:
+    """The same map with `count` more players on each side, like a 2v2 played as 4v4"""
+    extra = [
+        score.model_copy(update={"user_id": score.user_id + 1_000_000 * n})
+        for n in range(1, count + 1)
+        for score in game.scores
+    ]
+    return game.model_copy(update={"scores": [*game.scores, *extra]})
+
+
+@pytest.mark.parametrize("match_id", [TEAM_VS_ID, HEAD_TO_HEAD_ID])
+def test_a_bigger_last_map_is_a_tiebreaker_for_fun(match_id: int) -> None:
+    detail = load_detail(match_id)
+    last_index = len(detail.games) - 1
+    bigger = with_extra_players(detail.games[last_index], 1)
+
+    trimmed = trim_games(replace_games(detail, {last_index: bigger}))
+
+    assert [(s.game, s.reason) for s in trimmed.skipped] == [(bigger, SkipReason.FUN_TIEBREAKER)]
+    assert len(trimmed.games) == len(detail.games) - 1
+
+
+def test_a_bigger_map_before_the_end_still_counts() -> None:
+    detail = load_detail(TEAM_VS_ID)
+    bigger = with_extra_players(detail.games[5], 1)
+
+    trimmed = trim_games(replace_games(detail, {5: bigger}))
+
+    assert trimmed.skipped == []

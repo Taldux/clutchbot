@@ -74,6 +74,7 @@ def check_config() -> None:
     typer.echo(f"  match_expiry_hours:       {settings.match_expiry_hours}")
     typer.echo(f"  clutch_threshold_percent: {settings.clutch_threshold_percent}")
     typer.echo(f"  warmup_games_checked:     {settings.warmup_games_checked}")
+    typer.echo(f"  ez_multiplier:            {settings.ez_multiplier}")
     typer.echo(f"  data_dir:                 {settings.data_dir}")
     typer.echo(f"  acronyms_path:            {settings.resolved_acronyms_path}")
     typer.echo(f"  log_level:                {settings.log_level}")
@@ -297,6 +298,7 @@ async def _run_service(
             match_expiry=timedelta(hours=settings.match_expiry_hours),
             warmup_games_checked=settings.warmup_games_checked,
             clutch_threshold_percent=settings.clutch_threshold_percent,
+            ez_multiplier=settings.ez_multiplier,
             alerter=alerter,
         )
         log.info(
@@ -483,6 +485,7 @@ def _fetch_and_process(settings: Settings, match: str) -> ProcessedMatch:
             names,
             warmup_games_checked=settings.warmup_games_checked,
             clutch_threshold_percent=settings.clutch_threshold_percent,
+            ez_multiplier=settings.ez_multiplier,
         )
     except ProcessingError as exc:
         _fail(str(exc))

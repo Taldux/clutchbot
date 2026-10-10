@@ -1,5 +1,6 @@
 """Drop warmups, forfun TBs, aborts"""
 
+from collections import Counter
 from dataclasses import dataclass, replace
 from enum import StrEnum
 
@@ -54,9 +55,18 @@ def trim_games(detail: MatchDetail, warmup_games_checked: int = 2) -> TrimmedGam
             games.append(game)
 
     trimmed = TrimmedGames(games, skipped)
-    if len(games) >= 2 and is_warmup(games[-1]):
+    if len(games) >= 2 and (is_warmup(games[-1]) or _has_extra_players(games)):
         return trimmed.without_last(SkipReason.FUN_TIEBREAKER)
     return trimmed
+
+
+def _has_extra_players(games: list[Game]) -> bool:
+    *before, last = games
+    return _largest_side(last) > max(_largest_side(game) for game in before)
+
+
+def _largest_side(game: Game) -> int:
+    return max(Counter(score.match.team for score in game.scores).values())
 
 
 def ends_with_fun_tiebreaker(result: MatchResult) -> bool:

@@ -57,6 +57,7 @@ class Listener:
         match_expiry: timedelta,
         warmup_games_checked: int,
         clutch_threshold_percent: float,
+        ez_multiplier: float,
         alerter: Alerter,
     ) -> None:
         self._alerter = alerter
@@ -69,6 +70,7 @@ class Listener:
         self._match_expiry = match_expiry
         self._warmup_games_checked = warmup_games_checked
         self._clutch_threshold_percent = clutch_threshold_percent
+        self._ez_multiplier = ez_multiplier
 
     async def poll_once(self, now: datetime) -> PollReport:
         report = PollReport()
@@ -152,6 +154,7 @@ class Listener:
                 names,
                 warmup_games_checked=self._warmup_games_checked,
                 clutch_threshold_percent=self._clutch_threshold_percent,
+                ez_multiplier=self._ez_multiplier,
             )
         except ProcessingError as exc:
             # when lobby closes without any maps played or something

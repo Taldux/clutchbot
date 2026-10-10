@@ -115,6 +115,7 @@ def make_listener(
         match_expiry=timedelta(hours=24),
         warmup_games_checked=2,
         clutch_threshold_percent=5.0,
+        ez_multiplier=1.5,
         alerter=alerter or RecordingAlerter(),
     )
 

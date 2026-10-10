@@ -84,6 +84,7 @@ All settings come from environment variables or `.env`. See [`.env.example`](.en
 | `POLL_INTERVAL_SECONDS` | `600` | how often the listing is checked |
 | `CLUTCH_THRESHOLD_PERCENT` | `5` | the margin that counts as clutch |
 | `WARMUP_GAMES_CHECKED` | `2` | how many first maps may be warmups |
+| `EZ_MULTIPLIER` | `1.5` | score multiplier for EZ on FreeMod maps, `1` turns it off |
 | `NTFY_URL` | – | ntfy topic for alerts |
 | `METRICS_PORT` | – | serve Prometheus metrics on this port |
 

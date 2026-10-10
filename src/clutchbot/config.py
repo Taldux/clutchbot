@@ -41,6 +41,8 @@ class Settings(BaseSettings):
 
     clutch_threshold_percent: float = Field(default=5.0, gt=0, le=100)
     warmup_games_checked: int = Field(default=2, ge=0, le=2)
+    # 1 turns it off
+    ez_multiplier: float = Field(default=1.5, ge=1, le=10)
 
     data_dir: Path = Path("data")
     acronyms_path: Path | None = None

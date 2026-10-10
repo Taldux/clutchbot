@@ -3,7 +3,7 @@
 
 services:
   clutchbot:
-    image: ghcr.io/taldux/clutchbot:${CLUTCHBOT_TAG:?set CLUTCHBOT_TAG in .env, e.g. 1.0.1}
+    image: ghcr.io/taldux/clutchbot:${CLUTCHBOT_TAG:?set CLUTCHBOT_TAG in .env, e.g. 1.0.2}
     platform: linux/amd64
     container_name: clutchbot
     restart: unless-stopped
@@ -24,6 +24,7 @@ services:
       MATCH_EXPIRY_HOURS: ${MATCH_EXPIRY_HOURS:-24}
       CLUTCH_THRESHOLD_PERCENT: ${CLUTCH_THRESHOLD_PERCENT:-5}
       WARMUP_GAMES_CHECKED: ${WARMUP_GAMES_CHECKED:-2}
+      EZ_MULTIPLIER: ${EZ_MULTIPLIER:-1.5}
       LOG_LEVEL: ${LOG_LEVEL:-INFO}
       LOG_FORMAT: ${LOG_FORMAT:-json}
       NTFY_URL: ${NTFY_URL:-}
