@@ -109,11 +109,12 @@ def test_process_posts_after_confirming(
     result = runner.invoke(app, ["process", "117358530", "--no-dry-run"], input="y\n")
 
     assert result.exit_code == 0, result.output
-    assert "Publish 2 post(s) on X?" in result.stdout
+    assert "Publish 3 post(s) on X?" in result.stdout
     assert "Post 1: https://x.com/i/status/p1" in result.stdout
     assert "Post 2: https://x.com/i/status/p2" in result.stdout
-    assert upload.call_count == 5  # the result card and 4 clutch cards
-    assert posts.call_count == 2
+    assert "Post 3: https://x.com/i/status/p3" in result.stdout
+    assert upload.call_count == 6  # the result card, 4 clutch cards and the stomp
+    assert posts.call_count == 3
 
 
 @pytest.mark.respx(assert_all_called=False)
@@ -134,13 +135,13 @@ def test_process_never_posts_a_match_twice(
     assert again.exit_code == 1
     assert "Match 117358530 was already posted, use --force" in again.output
     assert "Post 1: https://x.com/i/status/p1" in again.stdout  # where to find it
-    assert posts.call_count == 2  # nothing new
+    assert posts.call_count == 3  # nothing new
 
     forced = runner.invoke(app, ["process", "117358530", "--no-dry-run", "--yes", "--force"])
 
     assert forced.exit_code == 0, forced.output
-    assert "Post 1: https://x.com/i/status/p3" in forced.stdout
-    assert posts.call_count == 4
+    assert "Post 1: https://x.com/i/status/p4" in forced.stdout
+    assert posts.call_count == 6
 
 
 @pytest.mark.respx(assert_all_called=False)

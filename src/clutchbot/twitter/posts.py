@@ -11,6 +11,9 @@ HASHTAG = "#osugame"
 
 TROPHY = "\N{TROPHY}"
 LIGHTNING = "\N{HIGH VOLTAGE SIGN}"
+COLLISION = "\N{COLLISION SYMBOL}"
+FIRE = "\N{FIRE}"
+MIDDLE_DOT = "\N{MIDDLE DOT}"
 EN_DASH = "\N{EN DASH}"
 ELLIPSIS = "\N{HORIZONTAL ELLIPSIS}"
 
@@ -24,13 +27,14 @@ class PlannedPost:
 def plan_posts(processed: ProcessedMatch, cards: MatchCards) -> list[PlannedPost]:
     posts = [PlannedPost(_result_text(processed), [cards.result])]
 
+    maps = cards.maps
     chunks = [
-        cards.clutches[start : start + MAX_IMAGES_PER_POST]
-        for start in range(0, len(cards.clutches), MAX_IMAGES_PER_POST)
+        maps[start : start + MAX_IMAGES_PER_POST]
+        for start in range(0, len(maps), MAX_IMAGES_PER_POST)
     ]
     for number, chunk in enumerate(chunks, start=1):
         part = f" ({number}/{len(chunks)})" if len(chunks) > 1 else ""
-        posts.append(PlannedPost(_clutch_text(processed, len(cards.clutches)) + part, chunk))
+        posts.append(PlannedPost(_maps_text(processed, cards) + part, chunk))
     return posts
 
 
@@ -51,10 +55,18 @@ def _result_text(processed: ProcessedMatch) -> str:
     return f"{TROPHY} {_short(processed.names.tournament)}\n{line}\n{HASHTAG}"
 
 
-def _clutch_text(processed: ProcessedMatch, count: int) -> str:
+def _maps_text(processed: ProcessedMatch, cards: MatchCards) -> str:
     result = processed.result
-    maps = "clutch map" if count == 1 else "clutch maps"
-    return f"{LIGHTNING} {count} {maps} in {_short(result.red.name)} vs {_short(result.blue.name)}"
+    parts = []
+    if cards.clutches:
+        count = len(cards.clutches)
+        parts.append(f"{LIGHTNING} {count} {'clutch map' if count == 1 else 'clutch maps'}")
+    if cards.stomp is not None:
+        parts.append(f"{COLLISION} 1 stomp")
+    if cards.huge_score is not None:
+        parts.append(f"{FIRE} 1 huge score")
+    teams = f"{_short(result.red.name)} vs {_short(result.blue.name)}"
+    return f" {MIDDLE_DOT} ".join(parts) + f" in {teams}"
 
 
 def _short(name: str) -> str:
