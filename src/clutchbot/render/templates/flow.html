@@ -1,0 +1,61 @@
+<!doctype html>
+{% import "_parts.html" as parts %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/static/card.css">
+  <link rel="stylesheet" href="/static/flow.css">
+</head>
+<body>
+<main class="card">
+  <header class="flow-top">
+    <div class="label-group">
+      <span class="kind-label">Match flow</span>
+      <span class="map-count">{{ parts.plural(card.maps_played, "map") }}</span>
+    </div>
+    <div class="tournament ellipsis">{{ card.tournament }}</div>
+  </header>
+
+  <section class="flow-score">
+    <span class="team red ellipsis{% if card.winner == 'blue' %} lost{% endif %}">{{ card.red_name }}</span>
+    <span class="numbers"><span class="red">{{ card.red_wins }}</span> – <span class="blue">{{ card.blue_wins }}</span></span>
+    <span class="team blue ellipsis{% if card.winner == 'red' %} lost{% endif %}">{{ card.blue_name }}</span>
+  </section>
+
+  <svg class="chart" width="{{ card.width }}" height="{{ card.height }}" viewBox="0 0 {{ card.width }} {{ card.height }}">
+    <defs>
+      <clipPath id="above"><rect x="0" y="0" width="{{ card.width }}" height="{{ card.zero_y }}"/></clipPath>
+      <clipPath id="below"><rect x="0" y="{{ card.zero_y }}" width="{{ card.width }}" height="{{ card.height }}"/></clipPath>
+    </defs>
+
+    {% for point in card.points if point.tags %}
+    <line class="guide {{ point.tags[-1].kind }}" x1="{{ point.x }}" y1="{{ point.guide_top }}" x2="{{ point.x }}" y2="{{ point.guide_bottom }}"/>
+    {% endfor %}
+
+    <line class="zero" x1="0" y1="{{ card.zero_y }}" x2="{{ card.width }}" y2="{{ card.zero_y }}"/>
+    <polygon class="area red" points="{{ card.area }}" clip-path="url(#above)"/>
+    <polygon class="area blue" points="{{ card.area }}" clip-path="url(#below)"/>
+    <polyline class="line" points="{{ card.line }}"/>
+
+    {% for point in card.points %}
+    <circle class="dot {{ point.winner }}{% if point.tags %} {{ point.tags[0].kind }}{% endif %}" cx="{{ point.x }}" cy="{{ point.y }}" r="{{ 10 if point.tags else 7 }}"/>
+    <text class="score-label" x="{{ point.x }}" y="{{ point.label_y }}">{{ point.score }}</text>
+    <text class="map-number" x="{{ point.x }}" y="{{ card.axis_y }}">{{ point.map_number }}</text>
+      {% for tag in point.tags %}
+      <g class="tag {{ tag.kind }}">
+        <rect x="{{ point.x - 38 }}" y="{{ tag.y }}" width="76" height="24" rx="6"/>
+        <text x="{{ point.x }}" y="{{ tag.y + 17 }}">{{ tag.label }}</text>
+      </g>
+      {% endfor %}
+    {% endfor %}
+  </svg>
+
+  <footer class="bottom">
+    <span class="legend muted">
+      {% for tag in card.legend %}<span class="key {{ tag.kind }}">{{ tag.label }}</span>{% endfor %}
+    </span>
+    <span class="muted">{{ card.match_link }} · <span class="brand">ClutchBot</span></span>
+  </footer>
+</main>
+</body>
+</html>

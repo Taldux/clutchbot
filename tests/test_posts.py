@@ -84,6 +84,15 @@ def test_no_map_cards_still_posts_the_result() -> None:
     assert [card.file_name for card in posts[0].cards] == ["result.png"]
 
 
+def test_the_flow_chart_is_the_second_image_of_the_main_post() -> None:
+    cards = replace(fake_cards(1), flow=RenderedCard("flow.png", b"png"))
+
+    posts = plan_posts(processed(), cards)
+
+    assert [card.file_name for card in posts[0].cards] == ["result.png", "flow.png"]
+    assert [card.file_name for card in posts[1].cards] == ["clutch-1.png"]
+
+
 def test_more_than_four_clutch_maps_continue_in_another_reply() -> None:
     posts = plan_posts(processed(), fake_cards(6))
 

@@ -194,4 +194,9 @@ async def test_a_huge_score_replaces_the_stomp_on_the_same_map() -> None:
         cards = await render_match_cards(renderer, replace(match, huge_score=huge))
 
     assert cards.stomp is None
-    assert [c.file_name for c in cards.all] == ["result.png", "huge-1.png", "clutch-7.png"]
+    assert [c.file_name for c in cards.all] == [
+        "result.png",
+        "flow.png",
+        "huge-1.png",
+        "clutch-7.png",
+    ]

@@ -72,7 +72,7 @@ def test_process_dry_run(respx_mock: respx.MockRouter, isolated_config: Path) ->
     assert "DBHS | DBHS: (NINERIK) vs (Welter)" in result.stdout  # no acronyms file
     assert "NINERIK 3 - 7 Welter  (Winner: Welter)" in result.stdout
     assert "Dry run, nothing posted" in result.stdout
-    assert "Post 1 [result.png]" in result.stdout
+    assert "Post 1 [result.png, flow.png]" in result.stdout
     assert "  | Welter defeats NINERIK 7\N{EN DASH}3" in result.stdout
     assert "Post 2, reply to post 1 [clutch-5.png, clutch-6.png" in result.stdout
     folder = isolated_config / "output" / str(HEAD_TO_HEAD_ID)
@@ -113,7 +113,7 @@ def test_process_posts_after_confirming(
     assert "Post 1: https://x.com/i/status/p1" in result.stdout
     assert "Post 2: https://x.com/i/status/p2" in result.stdout
     assert "Post 3: https://x.com/i/status/p3" in result.stdout
-    assert upload.call_count == 6  # the result card, 4 clutch cards and the stomp
+    assert upload.call_count == 7  # result, flow chart, 4 clutch cards and the stomp
     assert posts.call_count == 3
 
 
@@ -196,7 +196,12 @@ def test_render_saves_the_cards(respx_mock: respx.MockRouter, isolated_config: P
 
     assert result.exit_code == 0, result.output
     folder = isolated_config / "cards" / str(TEAM_VS_ID)
-    assert sorted(p.name for p in folder.iterdir()) == ["clutch-7.png", "result.png", "stomp-1.png"]
+    assert sorted(p.name for p in folder.iterdir()) == [
+        "clutch-7.png",
+        "flow.png",
+        "result.png",
+        "stomp-1.png",
+    ]
     assert (folder / "result.png").read_bytes().startswith(b"\x89PNG")
     assert f"Saved {Path('cards') / str(TEAM_VS_ID) / 'result.png'}" in result.stdout
 

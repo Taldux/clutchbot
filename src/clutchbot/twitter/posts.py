@@ -25,7 +25,7 @@ class PlannedPost:
 
 
 def plan_posts(processed: ProcessedMatch, cards: MatchCards) -> list[PlannedPost]:
-    posts = [PlannedPost(_result_text(processed), [cards.result])]
+    posts = [PlannedPost(_result_text(processed), cards.main)]
 
     maps = cards.maps
     chunks = [

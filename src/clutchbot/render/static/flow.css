@@ -1,0 +1,210 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 675px;
+  padding: 28px 48px 0;
+}
+
+.flow-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.label-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 14px;
+}
+
+.kind-label {
+  padding: 5px 14px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.map-count {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tournament {
+  color: var(--accent);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.flow-score {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  gap: 24px;
+  margin-top: 14px;
+}
+
+.flow-score .team {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.flow-score .team.red {
+  text-align: right;
+}
+
+.flow-score .team.lost {
+  opacity: 0.6;
+}
+
+.flow-score .numbers {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.chart {
+  display: block;
+  margin-top: 6px;
+  overflow: visible;
+  font-family: inherit;
+}
+
+.zero {
+  stroke: var(--line);
+  stroke-width: 2;
+  stroke-dasharray: 6 6;
+}
+
+.area {
+  stroke: none;
+}
+
+.area.red {
+  fill: rgb(255 95 109 / 0.18);
+}
+
+.area.blue {
+  fill: rgb(95 140 255 / 0.18);
+}
+
+.line {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-opacity: 0.85;
+}
+
+.dot {
+  stroke: var(--bg);
+  stroke-width: 3;
+}
+
+.dot.red {
+  fill: var(--red);
+}
+
+.dot.blue {
+  fill: var(--blue);
+}
+
+.dot.tie {
+  fill: var(--muted);
+}
+
+.dot.clutch {
+  stroke: var(--gold);
+}
+
+.dot.stomp {
+  stroke: var(--stomp);
+}
+
+.dot.huge {
+  stroke: var(--accent);
+}
+
+.score-label {
+  fill: var(--text);
+  font-size: 16px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.map-number {
+  fill: var(--muted);
+  font-size: 16px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+.guide {
+  stroke-width: 2;
+  stroke-dasharray: 3 5;
+  stroke-opacity: 0.7;
+}
+
+.tag text {
+  fill: var(--bg);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-anchor: middle;
+  text-transform: uppercase;
+}
+
+.clutch {
+  --kind: var(--gold);
+}
+
+.stomp {
+  --kind: var(--stomp);
+}
+
+.huge {
+  --kind: var(--accent);
+}
+
+.tag rect {
+  fill: var(--kind);
+}
+
+.guide {
+  stroke: var(--kind);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: auto;
+  padding: 12px 0 20px;
+  font-size: 17px;
+}
+
+.legend {
+  display: flex;
+  gap: 18px;
+}
+
+.key::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 7px;
+  border-radius: 3px;
+  background: var(--kind);
+}
+
+.brand {
+  color: var(--accent);
+  font-weight: 800;
+}
