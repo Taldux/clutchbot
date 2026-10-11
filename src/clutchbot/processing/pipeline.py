@@ -3,6 +3,7 @@ from dataclasses import dataclass, replace
 from clutchbot.osu.models import MatchDetail
 from clutchbot.processing.clutch import DEFAULT_THRESHOLD_PERCENT, ClutchMap, clutch_maps
 from clutchbot.processing.cost import PlayerCost, match_costs
+from clutchbot.processing.highlights import HugeScore, Stomp, biggest_huge_score, biggest_stomp
 from clutchbot.processing.mods import DEFAULT_EZ_MULTIPLIER, apply_ez_multiplier
 from clutchbot.processing.result import MatchResult, ResultError, build_result
 from clutchbot.processing.tournament import TournamentName
@@ -26,6 +27,8 @@ class ProcessedMatch:
     result: MatchResult
     costs: list[PlayerCost]
     clutches: list[ClutchMap]
+    stomp: Stomp | None
+    huge_score: HugeScore | None
 
 
 def process_match(
@@ -46,13 +49,16 @@ def process_match(
         trimmed = trimmed.without_last(SkipReason.FUN_TIEBREAKER)
         result = _build_result(detail, trimmed, names)
 
+    clutches = clutch_maps(result, clutch_threshold_percent)
     return ProcessedMatch(
         detail=detail,
         names=names,
         trimmed=trimmed,
         result=result,
         costs=match_costs(result),
-        clutches=clutch_maps(result, clutch_threshold_percent),
+        clutches=clutches,
+        stomp=biggest_stomp(result),
+        huge_score=biggest_huge_score(result, clutches),
     )
 
 
