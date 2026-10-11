@@ -35,7 +35,7 @@ def test_head_to_head_clutch_card() -> None:
     assert (card.stars, card.mods) == ("8.68", ["HR"])
     assert card.cover_url is not None
     assert card.cover_url.endswith("/covers/cover@2x.jpg?1772657500")
-    assert (card.margin, card.winner_name) == ("0.63%", "Welter")
+    assert (card.margin, card.winner_name) == ("+2,144", "Welter")  # 342,711 - 340,567
     assert (card.red.name, card.red.total, card.red.is_winner) == ("NINERIK", "340,567", False)
     assert (card.blue.name, card.blue.total, card.blue.is_winner) == ("Welter", "342,711", True)
     ninerik = card.red.players[0]

@@ -112,7 +112,7 @@ def build_clutch_card(
         stars=f"{beatmap.difficulty_rating:.2f}" if beatmap else "",
         mods=[mod for mod in game.mods if mod != NO_FAIL],
         cover_url=beatmap.beatmapset.covers.cover_2x if beatmap else None,
-        margin=f"{clutch.margin_percent:.2f}%",
+        margin=f"+{abs(clutch.game.red_score - clutch.game.blue_score):,}",
         winner_name=result.team(clutch.winner).name,
         red=side_panel(Side.RED),
         blue=side_panel(Side.BLUE),
