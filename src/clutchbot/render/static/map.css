@@ -1,9 +1,19 @@
-/* Clutch card layout (colours and helpers come from card.css) */
+/* Map card layout for clutch, stomp and huge-score cards (colours and helpers come from card.css) */
 
 .card {
+  --kind: var(--gold);
   display: flex;
   flex-direction: column;
   height: 675px;
+}
+
+/* each kind of card has its own colour for the label and the big number */
+.card.stomp {
+  --kind: var(--stomp);
+}
+
+.card.huge {
+  --kind: var(--accent);
 }
 
 /* Beatmap cover banner; the gradient doubles as the placeholder without a cover */
@@ -35,10 +45,10 @@
   gap: 14px;
 }
 
-.clutch-label {
+.kind-label {
   padding: 5px 14px;
   border-radius: 8px;
-  background: var(--gold);
+  background: var(--kind);
   color: var(--bg);
   font-size: 18px;
   font-weight: 900;
@@ -138,7 +148,7 @@
 }
 
 .margin .value {
-  color: var(--gold);
+  color: var(--kind);
   font-size: 76px;
   font-weight: 900;
   line-height: 1;
@@ -263,6 +273,13 @@
 }
 
 .brand {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+/* the huge score in its panel */
+.row.highlighted .name,
+.row.highlighted .score {
   color: var(--accent);
   font-weight: 800;
 }

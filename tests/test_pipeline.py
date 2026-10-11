@@ -60,9 +60,12 @@ def test_summary() -> None:
     assert lines[3] == "NINERIK 3 - 7 Welter  (Winner: Welter)"
     assert "  red   NINERIK               2.52  (10 maps)" in lines
     assert "  blue  Welter                2.16  (10 maps)" in lines
-    assert lines[-1] == (
-        "  10. Gram VS Camellia - Ragnarok [Desolation]: Welter by 0.63% (342,711 vs 340,567)"
-    )
+    assert lines[-4:] == [
+        "  10. Gram VS Camellia - Ragnarok [Desolation]: Welter by 0.63% (342,711 vs 340,567)",
+        "",
+        "Stomp: map 7, Shimotsuki Haruka - Hidra Heteromycin [Hymn]: NINERIK with 4.71x the score",
+        "Huge score: none",
+    ]
 
 
 def test_summary_lists_skipped_warmups() -> None:

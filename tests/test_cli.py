@@ -195,7 +195,7 @@ def test_render_saves_the_cards(respx_mock: respx.MockRouter, isolated_config: P
 
     assert result.exit_code == 0, result.output
     folder = isolated_config / "cards" / str(TEAM_VS_ID)
-    assert sorted(p.name for p in folder.iterdir()) == ["clutch-7.png", "result.png"]
+    assert sorted(p.name for p in folder.iterdir()) == ["clutch-7.png", "result.png", "stomp-1.png"]
     assert (folder / "result.png").read_bytes().startswith(b"\x89PNG")
     assert f"Saved {Path('cards') / str(TEAM_VS_ID) / 'result.png'}" in result.stdout
 

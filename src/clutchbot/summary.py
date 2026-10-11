@@ -45,6 +45,25 @@ def format_summary(processed: ProcessedMatch) -> str:
             f"{result.team(clutch.winner).name} by {clutch.margin_percent:.2f}% "
             f"({scores[0]:,} vs {scores[1]:,})"
         )
+
+    stomp, huge = processed.stomp, processed.huge_score
+    lines.append("")
+    if stomp is None:
+        lines.append("Stomp: none")
+    else:
+        lines.append(
+            f"Stomp: map {stomp.map_number}, {map_title(stomp.game.game)}: "
+            f"{result.team(stomp.winner).name} with {stomp.ratio:.2f}x the score"
+        )
+    if huge is None:
+        lines.append("Huge score: none")
+    else:
+        user = users.get(huge.score.user_id)
+        name = user.username if user is not None else str(huge.score.user_id)
+        lines.append(
+            f"Huge score: map {huge.map_number}, {name} with {huge.score.total_score:,} "
+            f"({huge.ratio:.2f}x the next best)"
+        )
     return "\n".join(lines)
 
 

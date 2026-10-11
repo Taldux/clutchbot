@@ -1,9 +1,12 @@
+import math
 from dataclasses import dataclass
+from enum import StrEnum
 
 from clutchbot.osu.models import Score
 from clutchbot.processing.clutch import ClutchMap
+from clutchbot.processing.highlights import HugeScore, Stomp
 from clutchbot.processing.pipeline import ProcessedMatch
-from clutchbot.processing.result import MatchType, Side
+from clutchbot.processing.result import GameResult, MatchType, Side
 from clutchbot.render.browser import CardRenderer
 from clutchbot.render.images import avatar_url
 from clutchbot.render.templating import render_template
@@ -11,6 +14,19 @@ from clutchbot.render.templating import render_template
 MAX_SCORE_ROWS = 4
 LONG_TITLE = 24
 NO_FAIL = "NF"
+
+
+class MapKind(StrEnum):
+    CLUTCH = "clutch"
+    STOMP = "stomp"
+    HUGE_SCORE = "huge"
+
+
+LABELS = {
+    MapKind.CLUTCH: "Clutch moment",
+    MapKind.STOMP: "Stomp",
+    MapKind.HUGE_SCORE: "Huge score",
+}
 
 
 @dataclass(frozen=True)
@@ -21,10 +37,11 @@ class ScoreRow:
     accuracy: str
     combo: str
     mods: str  # without NF
+    is_highlighted: bool  # the huge score
 
 
 @dataclass(frozen=True)
-class ClutchSide:
+class MapSide:
     side: str
     name: str
     total: str
@@ -34,7 +51,9 @@ class ClutchSide:
 
 
 @dataclass(frozen=True)
-class ClutchCard:
+class MapCard:
+    kind: str
+    label: str
     tournament: str
     match_link: str
     map_number: int
@@ -46,10 +65,13 @@ class ClutchCard:
     stars: str
     mods: list[str]  # forced mod without NF
     cover_url: str | None
-    margin: str
-    winner_name: str
-    red: ClutchSide
-    blue: ClutchSide
+    headline: str  # the big number on the right
+    # the line under it: "{before}<strong>{name}</strong>{after}"
+    note_before: str
+    note_name: str
+    note_after: str
+    red: MapSide
+    blue: MapSide
     red_wins_after: int
     blue_wins_after: int
     is_head_to_head: bool
@@ -57,10 +79,64 @@ class ClutchCard:
 
 def build_clutch_card(
     processed: ProcessedMatch, clutch: ClutchMap, max_rows: int = MAX_SCORE_ROWS
-) -> ClutchCard:
+) -> MapCard:
+    gap = abs(clutch.game.red_score - clutch.game.blue_score)
+    return _build_map_card(
+        processed,
+        MapKind.CLUTCH,
+        clutch.map_number,
+        clutch.game,
+        headline=f"+{gap:,}",
+        note=("won by ", processed.result.team(clutch.winner).name, ""),
+        max_rows=max_rows,
+    )
+
+
+def build_stomp_card(
+    processed: ProcessedMatch, stomp: Stomp, max_rows: int = MAX_SCORE_ROWS
+) -> MapCard:
+    return _build_map_card(
+        processed,
+        MapKind.STOMP,
+        stomp.map_number,
+        stomp.game,
+        headline=_times(stomp.ratio),
+        note=("won by ", processed.result.team(stomp.winner).name, ""),
+        max_rows=max_rows,
+    )
+
+
+def build_huge_score_card(
+    processed: ProcessedMatch, huge: HugeScore, max_rows: int = MAX_SCORE_ROWS
+) -> MapCard:
+    user = processed.detail.users_by_id.get(huge.score.user_id)
+    name = user.username if user is not None else str(huge.score.user_id)
+    return _build_map_card(
+        processed,
+        MapKind.HUGE_SCORE,
+        huge.map_number,
+        huge.game,
+        headline=f"{huge.score.total_score:,}",
+        note=("", name, f" · {_times(huge.ratio)} the next best"),
+        max_rows=max_rows,
+        highlight=huge.score,
+    )
+
+
+def _build_map_card(
+    processed: ProcessedMatch,
+    kind: MapKind,
+    map_number: int,
+    played: GameResult,
+    *,
+    headline: str,
+    note: tuple[str, str, str],
+    max_rows: int,
+    highlight: Score | None = None,
+) -> MapCard:
     result = processed.result
     users = processed.detail.users_by_id
-    game = clutch.game.game
+    game = played.game
 
     def row(score: Score) -> ScoreRow:
         user = users.get(score.user_id)
@@ -71,6 +147,7 @@ def build_clutch_card(
             accuracy=f"{score.accuracy * 100:.2f}%",
             combo=f"{score.max_combo:,}x",
             mods="".join(mod for mod in score.mod_acronyms if mod != NO_FAIL),
+            is_highlighted=score is highlight,
         )
 
     def played_for(score: Score, side: Side) -> bool:
@@ -78,7 +155,7 @@ def build_clutch_card(
             return score.match.team == side.value
         return score.user_id in result.team(side).player_ids
 
-    def side_panel(side: Side) -> ClutchSide:
+    def side_panel(side: Side) -> MapSide:
         team = result.team(side)
         scores = sorted(
             (s for s in game.scores if played_for(s, side)),
@@ -87,23 +164,26 @@ def build_clutch_card(
         )
         rows = [row(s) for s in scores]
         shown = rows if len(rows) <= max_rows else rows[: max_rows - 1]
-        total = clutch.game.red_score if side is Side.RED else clutch.game.blue_score
-        return ClutchSide(
+        total = played.red_score if side is Side.RED else played.blue_score
+        return MapSide(
             side=side.value,
             name=team.name,
             total=f"{total:,}",
-            is_winner=clutch.winner is side,
+            is_winner=played.winner is side,
             players=shown,
             hidden_players=len(rows) - len(shown),
         )
 
-    games_so_far = result.games[: clutch.map_number]
+    games_so_far = result.games[:map_number]
     beatmap = game.beatmap
     title = beatmap.beatmapset.title if beatmap else f"Beatmap {game.beatmap_id}"
-    return ClutchCard(
+    note_before, note_name, note_after = note
+    return MapCard(
+        kind=kind.value,
+        label=LABELS[kind],
         tournament=processed.names.tournament,
         match_link=f"osu.ppy.sh/mp/{processed.detail.match.id}",
-        map_number=clutch.map_number,
+        map_number=map_number,
         maps_played=len(result.games),
         title=title,
         long_title=len(title) > LONG_TITLE,
@@ -112,8 +192,10 @@ def build_clutch_card(
         stars=f"{beatmap.difficulty_rating:.2f}" if beatmap else "",
         mods=[mod for mod in game.mods if mod != NO_FAIL],
         cover_url=beatmap.beatmapset.covers.cover_2x if beatmap else None,
-        margin=f"+{abs(clutch.game.red_score - clutch.game.blue_score):,}",
-        winner_name=result.team(clutch.winner).name,
+        headline=headline,
+        note_before=note_before,
+        note_name=note_name,
+        note_after=note_after,
         red=side_panel(Side.RED),
         blue=side_panel(Side.BLUE),
         red_wins_after=sum(1 for g in games_so_far if g.winner is Side.RED),
@@ -122,12 +204,15 @@ def build_clutch_card(
     )
 
 
-def clutch_card_html(card: ClutchCard) -> str:
-    return render_template("clutch.html", card=card)
+def _times(ratio: float) -> str:
+    if math.isinf(ratio):
+        return "\N{INFINITY}" + "\N{MULTIPLICATION SIGN}"
+    return f"{ratio:.1f}{'\N{MULTIPLICATION SIGN}'}"
 
 
-async def render_clutch_cards(renderer: CardRenderer, processed: ProcessedMatch) -> list[bytes]:
-    return [
-        await renderer.render(clutch_card_html(build_clutch_card(processed, clutch)))
-        for clutch in processed.clutches
-    ]
+def map_card_html(card: MapCard) -> str:
+    return render_template("map.html", card=card)
+
+
+async def render_map_card(renderer: CardRenderer, card: MapCard) -> bytes:
+    return await renderer.render(map_card_html(card))

@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/static/card.css">
-  <link rel="stylesheet" href="/static/clutch.css">
+  <link rel="stylesheet" href="/static/map.css">
 </head>
 <body>
-<main class="card">
+<main class="card {{ card.kind }}">
   <section class="banner"{% if card.cover_url %} style="--cover: url('{{ card.cover_url }}')"{% endif %}>
     <div class="banner-top">
       <div class="label-group">
-        <span class="clutch-label">Clutch moment</span>
+        <span class="kind-label">{{ card.label }}</span>
         <span class="map-count">Map {{ card.map_number }} of {{ card.maps_played }}</span>
       </div>
       <div class="tournament ellipsis">{{ card.tournament }}</div>
@@ -31,8 +31,8 @@
         </div>
       </div>
       <div class="margin">
-        <div class="value">{{ card.margin }}</div>
-        <div class="won-by ellipsis">won by <strong>{{ card.winner_name }}</strong></div>
+        <div class="value">{{ card.headline }}</div>
+        <div class="won-by ellipsis">{{ card.note_before }}<strong>{{ card.note_name }}</strong>{{ card.note_after }}</div>
       </div>
     </div>
   </section>
@@ -55,7 +55,7 @@
         {% endfor %}
       {% else %}
         {% for player in side.players %}
-        <div class="row">
+        <div class="row{% if player.is_highlighted %} highlighted{% endif %}">
           {{ parts.avatar(player.avatar_url, "small") }}
           <span class="name ellipsis">{{ player.name }}</span>
           {% if player.mods %}<span class="mod small">{{ player.mods }}</span>{% endif %}

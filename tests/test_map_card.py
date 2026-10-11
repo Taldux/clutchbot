@@ -1,13 +1,23 @@
 import io
+import math
 from dataclasses import replace
 
 from PIL import Image
 
 from clutchbot.processing.clutch import ClutchMap
+from clutchbot.processing.highlights import HugeScore
 from clutchbot.processing.pipeline import ProcessedMatch, process_match
+from clutchbot.processing.result import Side
 from clutchbot.processing.tournament import TournamentName
 from clutchbot.render.browser import CardRenderer
-from clutchbot.render.clutch_card import build_clutch_card, clutch_card_html, render_clutch_cards
+from clutchbot.render.cards import render_match_cards
+from clutchbot.render.map_card import (
+    build_clutch_card,
+    build_huge_score_card,
+    build_stomp_card,
+    map_card_html,
+    render_map_card,
+)
 from tests.conftest import HEAD_TO_HEAD_ID, TEAM_VS_ID, WARMUP_MATCH_ID, load_detail
 
 NAMES = {
@@ -15,6 +25,8 @@ NAMES = {
     TEAM_VS_ID: TournamentName("CRTOA", "CRTOA Tournament", "Furball Pups", "Junior Sleuth Teds"),
     WARMUP_MATCH_ID: TournamentName("BLB", "BLB Tournament", "Hessen", "Berlin"),
 }
+TIMES = "\N{MULTIPLICATION SIGN}"
+INFINITY = "\N{INFINITY}"
 
 
 def processed(match_id: int) -> ProcessedMatch:
@@ -35,7 +47,8 @@ def test_head_to_head_clutch_card() -> None:
     assert (card.stars, card.mods) == ("8.68", ["HR"])
     assert card.cover_url is not None
     assert card.cover_url.endswith("/covers/cover@2x.jpg?1772657500")
-    assert (card.margin, card.winner_name) == ("+2,144", "Welter")  # 342,711 - 340,567
+    assert (card.kind, card.label) == ("clutch", "Clutch moment")
+    assert (card.headline, card.note_name) == ("+2,144", "Welter")  # 342,711 - 340,567
     assert (card.red.name, card.red.total, card.red.is_winner) == ("NINERIK", "340,567", False)
     assert (card.blue.name, card.blue.total, card.blue.is_winner) == ("Welter", "342,711", True)
     ninerik = card.red.players[0]
@@ -65,7 +78,7 @@ def test_team_vs_clutch_card() -> None:
     assert card.long_title
     assert (card.red.total, card.blue.total) == ("694,726", "661,520")
     assert card.red.is_winner
-    assert card.winner_name == "Furball Pups"
+    assert card.note_name == "Furball Pups"
     for side in (card.red, card.blue):
         assert len(side.players) == 2
         scores = [int(p.score.replace(",", "")) for p in side.players]
@@ -90,19 +103,19 @@ def test_deleted_beatmap() -> None:
 
     assert card.title == f"Beatmap {game.beatmap_id}"
     assert (card.artist, card.version, card.stars, card.cover_url) == ("", "", "", None)
-    assert "--cover" not in clutch_card_html(card)
+    assert "--cover" not in map_card_html(card)
 
 
 def test_cover_is_used_in_the_html() -> None:
     match = processed(HEAD_TO_HEAD_ID)
     card = build_clutch_card(match, clutch_at(match, 10))
 
-    html = clutch_card_html(card)
+    html = map_card_html(card)
 
     assert f"--cover: url('{card.cover_url}')" in html
 
 
-async def test_renders_every_clutch_card() -> None:
+async def test_renders_clutch_cards() -> None:
     requested: list[str] = []
 
     async def fake_images(url: str) -> tuple[bytes, str] | None:
@@ -112,12 +125,19 @@ async def test_renders_every_clutch_card() -> None:
         return buffer.getvalue(), "image/png"
 
     async with CardRenderer(fake_images) as renderer:
-        pngs = await render_clutch_cards(renderer, processed(HEAD_TO_HEAD_ID))
-        team_vs = await render_clutch_cards(renderer, processed(TEAM_VS_ID))
+        head_to_head = processed(HEAD_TO_HEAD_ID)
+        pngs = [
+            await render_map_card(renderer, build_clutch_card(head_to_head, clutch))
+            for clutch in head_to_head.clutches
+        ]
+        team_vs = processed(TEAM_VS_ID)
+        team_vs_pngs = [
+            await render_map_card(renderer, build_clutch_card(team_vs, team_vs.clutches[0]))
+        ]
 
     assert len(pngs) == 4
-    assert len(team_vs) == 1
-    for png in pngs + team_vs:
+    assert len(team_vs_pngs) == 1
+    for png in pngs + team_vs_pngs:
         assert Image.open(io.BytesIO(png)).size == (2400, 1350)
     covers = [url for url in requested if "assets.ppy.sh" in url]
     avatars = [url for url in requested if "a.ppy.sh/" in url and url not in covers]
@@ -125,3 +145,53 @@ async def test_renders_every_clutch_card() -> None:
     assert all("cover@2x" in url for url in covers)
     assert avatars  # players' pictures were asked for too
     assert set(requested) == set(covers) | set(avatars)
+
+
+def test_stomp_card() -> None:
+    match = processed(HEAD_TO_HEAD_ID)
+    assert match.stomp is not None
+
+    card = build_stomp_card(match, match.stomp)
+
+    assert (card.kind, card.label, card.map_number) == ("stomp", "Stomp", 7)
+    assert (card.headline, card.note_name) == (f"4.7{TIMES}", "NINERIK")  # 389,527 against 82,636
+    assert 'class="card stomp"' in map_card_html(card)
+
+
+def test_stomp_against_nothing() -> None:
+    match = processed(HEAD_TO_HEAD_ID)
+    assert match.stomp is not None
+
+    card = build_stomp_card(match, replace(match.stomp, ratio=math.inf))
+
+    assert card.headline == INFINITY + TIMES
+
+
+def test_huge_score_card() -> None:
+    match = processed(TEAM_VS_ID)
+    played = match.result.games[3]
+    score = max(played.game.scores, key=lambda s: s.total_score)
+    huge = HugeScore(4, played, score, Side(score.match.team), 2.345)
+
+    card = build_huge_score_card(match, huge)
+
+    assert (card.kind, card.label) == ("huge", "Huge score")
+    assert card.headline == f"{score.total_score:,}"
+    assert (card.note_before, card.note_after) == ("", f" · 2.3{TIMES} the next best")
+    highlighted = [p for p in card.red.players + card.blue.players if p.is_highlighted]
+    assert [p.name for p in highlighted] == [card.note_name]
+    assert 'class="row highlighted"' in map_card_html(card)
+
+
+async def test_a_huge_score_replaces_the_stomp_on_the_same_map() -> None:
+    match = processed(TEAM_VS_ID)
+    assert match.stomp is not None
+    played = match.stomp.game
+    score = max(played.game.scores, key=lambda s: s.total_score)
+    huge = HugeScore(match.stomp.map_number, played, score, Side(score.match.team), 2.5)
+
+    async with CardRenderer() as renderer:
+        cards = await render_match_cards(renderer, replace(match, huge_score=huge))
+
+    assert cards.stomp is None
+    assert [c.file_name for c in cards.all] == ["result.png", "huge-1.png", "clutch-7.png"]
