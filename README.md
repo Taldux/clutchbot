@@ -5,7 +5,7 @@
 <h1 align="center">ClutchBot</h1>
 
 <p align="center">
-  Twitter bot that watches osu! tournament matches and posts results, match costs and the closest maps.
+  Twitter bot that watches osu! tournament matches and posts results, match costs, the match flow and its standout maps.
 </p>
 
 <p align="center">
@@ -26,8 +26,9 @@
 ## Features
 
 - observes for lobbies of known tournaments
-- posts a result card once a match finishes: final score, both rosters and every player's match cost
+- posts a result card once a match finishes: final score, both rosters and every player's match cost, as well as a map flow chart
 - finds clutch maps, maps won by less than 5% (configurable)
+- finds stomps and huge scores
 - supports team-vs and head-to-head (1v1) matches
 
 ## Internals
