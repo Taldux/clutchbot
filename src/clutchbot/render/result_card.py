@@ -12,6 +12,7 @@ LONG_TEAM_NAME = 16
 
 @dataclass(frozen=True)
 class PlayerRow:
+    rank: int  # among both teams
     name: str
     avatar_url: str | None
     cost: str
@@ -46,6 +47,7 @@ def build_result_card(processed: ProcessedMatch, max_rows: int = MAX_PLAYER_ROWS
     result = processed.result
     users = processed.detail.users_by_id
     best_cost = max((c.cost for c in processed.costs), default=None)
+    all_costs = [c.cost for c in processed.costs]
 
     def panel(side: Side) -> TeamPanel:
         costs = sorted(
@@ -53,6 +55,7 @@ def build_result_card(processed: ProcessedMatch, max_rows: int = MAX_PLAYER_ROWS
         )
         rows = [
             PlayerRow(
+                rank=1 + sum(other > c.cost for other in all_costs),
                 name=users[c.user_id].username if c.user_id in users else str(c.user_id),
                 avatar_url=avatar_url(users.get(c.user_id)),
                 cost=f"{c.cost:.2f}",

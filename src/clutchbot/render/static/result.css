@@ -164,6 +164,20 @@
   font-size: 21px;
 }
 
+/* Rank among the players of both teams */
+.rank {
+  flex-shrink: 0;
+  width: 30px;
+  margin-right: -2px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.player.mvp .rank {
+  color: var(--gold);
+}
+
 .player .name {
   flex: 1 1 auto;
 }

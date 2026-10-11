@@ -20,6 +20,7 @@
       </div>
       {% for player in team.players %}
       <div class="player{% if player.is_mvp %} mvp{% endif %}">
+        <span class="rank">#{{ player.rank }}</span>
         {{ parts.avatar(player.avatar_url, "small") }}
         <span class="name ellipsis">{{ player.name }}</span>
         {% if player.is_mvp %}<span class="mvp-tag">MVP</span>{% endif %}

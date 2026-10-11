@@ -69,6 +69,24 @@ def test_players_are_sorted_by_cost_and_the_best_is_mvp() -> None:
     assert mvps == ["enri"]
 
 
+def test_players_are_ranked_across_both_teams() -> None:
+    card = build_result_card(processed())
+
+    assert [(p.name, p.rank) for p in card.red.players] == [
+        ("enri", 1),
+        ("Bernkastel", 4),
+        ("ciee", 5),  # equal costs share a rank
+        ("Juicy", 5),
+    ]
+    assert [(p.name, p.rank) for p in card.blue.players] == [
+        ("MALISZEWSKI", 2),
+        ("Taldux", 3),
+        ("OmegaOrigins", 7),
+        ("PSP", 8),
+    ]
+    assert '<span class="rank">#7</span>' in result_card_html(card)
+
+
 def test_player_avatars() -> None:
     card = build_result_card(processed())
     avatars = {p.name: p.avatar_url for p in card.red.players + card.blue.players}
