@@ -16,6 +16,7 @@ class PlayerRow:
     name: str
     avatar_url: str | None
     cost: str
+    average_score: str
     maps_played: int
     is_mvp: bool
 
@@ -48,6 +49,10 @@ def build_result_card(processed: ProcessedMatch, max_rows: int = MAX_PLAYER_ROWS
     users = processed.detail.users_by_id
     best_cost = max((c.cost for c in processed.costs), default=None)
     all_costs = [c.cost for c in processed.costs]
+    scores_by_player: dict[int, list[int]] = {}
+    for played in result.games:
+        for score in played.game.scores:
+            scores_by_player.setdefault(score.user_id, []).append(score.total_score)
 
     def panel(side: Side) -> TeamPanel:
         costs = sorted(
@@ -59,6 +64,7 @@ def build_result_card(processed: ProcessedMatch, max_rows: int = MAX_PLAYER_ROWS
                 name=users[c.user_id].username if c.user_id in users else str(c.user_id),
                 avatar_url=avatar_url(users.get(c.user_id)),
                 cost=f"{c.cost:.2f}",
+                average_score=_average(scores_by_player.get(c.user_id, [])),
                 maps_played=c.maps_played,
                 is_mvp=c.cost == best_cost,
             )
@@ -172,6 +178,10 @@ async def render_result_card(renderer: CardRenderer, processed: ProcessedMatch) 
     else:
         card = build_result_card(processed)
     return await renderer.render(result_card_html(card))
+
+
+def _average(scores: list[int]) -> str:
+    return f"{sum(scores) / len(scores):,.0f}" if scores else "0"
 
 
 def _match_date(processed: ProcessedMatch) -> str:

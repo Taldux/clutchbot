@@ -87,6 +87,17 @@ def test_players_are_ranked_across_both_teams() -> None:
     assert '<span class="rank">#7</span>' in result_card_html(card)
 
 
+def test_average_scores_of_the_maps_each_player_played() -> None:
+    card = build_result_card(processed())
+    rows = {p.name: (p.average_score, p.maps_played) for p in card.red.players + card.blue.players}
+
+    assert rows["enri"] == ("542,003", 13)  # 7,046,033 over 13 maps, rounded
+    assert rows["PSP"] == ("7,690", 1)
+    html = result_card_html(card)
+    assert '<span class="average">542,003</span>' in html
+    assert '<span class="maps">13</span>' in html
+
+
 def test_player_avatars() -> None:
     card = build_result_card(processed())
     avatars = {p.name: p.avatar_url for p in card.red.players + card.blue.players}

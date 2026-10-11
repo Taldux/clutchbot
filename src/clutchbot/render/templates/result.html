@@ -15,8 +15,10 @@
     {% for team in [card.red, card.blue] %}
     <div class="roster {{ team.side }}">
       <div class="roster-head">
-        <span>Player</span>
-        <span>Match cost</span>
+        <span class="grow">Player</span>
+        <span>Avg score</span>
+        <span class="maps">Maps</span>
+        <span class="cost">Cost</span>
       </div>
       {% for player in team.players %}
       <div class="player{% if player.is_mvp %} mvp{% endif %}">
@@ -24,7 +26,8 @@
         {{ parts.avatar(player.avatar_url, "small") }}
         <span class="name ellipsis">{{ player.name }}</span>
         {% if player.is_mvp %}<span class="mvp-tag">MVP</span>{% endif %}
-        <span class="maps">{{ parts.plural(player.maps_played, "map") }}</span>
+        <span class="average">{{ player.average_score }}</span>
+        <span class="maps">{{ player.maps_played }}</span>
         <span class="cost">{{ player.cost }}</span>
       </div>
       {% endfor %}

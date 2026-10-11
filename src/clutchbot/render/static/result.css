@@ -145,7 +145,7 @@
 
 .roster-head {
   display: flex;
-  justify-content: space-between;
+  gap: 12px;
   margin-bottom: 4px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--line);
@@ -154,6 +154,18 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.roster-head .grow {
+  flex: 1;
+}
+
+.roster-head .maps,
+.roster-head .cost {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 .player {
@@ -182,10 +194,20 @@
   flex: 1 1 auto;
 }
 
+.average {
+  flex-shrink: 0;
+  width: 80px;
+  color: var(--muted);
+  font-size: 17px;
+  text-align: right;
+}
+
 .maps {
   flex-shrink: 0;
+  width: 40px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 17px;
+  text-align: right;
 }
 
 .cost {
