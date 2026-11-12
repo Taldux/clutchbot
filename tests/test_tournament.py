@@ -15,7 +15,9 @@ ACRONYMS = {
     "CRTOA": "CRTOA Tournament",
     "BLB": "BLB Tournament",
     "O!FT10": "osu! finnish tournament 10",
+    "O!CL F26": "osu! Champions League Fall 2026",
 }
+CL_F26 = TournamentName("O!CL F26", "osu! Champions League Fall 2026", "A", "B")
 HESSEN_VS_BERLIN = TournamentName("BLB", "BLB Tournament", "Hessen", "Berlin")
 
 
@@ -45,6 +47,9 @@ HESSEN_VS_BERLIN = TournamentName("BLB", "BLB Tournament", "Hessen", "Berlin")
             "o!ft10: (AllyrD) vs (savilju)",
             TournamentName("O!FT10", "osu! finnish tournament 10", "AllyrD", "savilju"),
         ),
+        # a space in the acronym
+        ("o!CL F26: (A) vs (B)", CL_F26),
+        ("o!cl f26: (A) vs (B)", CL_F26),
         # known tournament, but no team names in the usual format
         ("BLB: Grand Finals", TournamentName("BLB", "BLB Tournament", "Red Team", "Blue Team")),
         ("BLB: (Hessen)", TournamentName("BLB", "BLB Tournament", "Red Team", "Blue Team")),
@@ -60,7 +65,8 @@ def test_tournament_lobbies(name: str, expected: TournamentName) -> None:
         "XYZ: (A) vs (B)",  # unknown acronym
         "peppy's game",  # no acronym
         "BLB (Hessen) vs (Berlin)",  # no colon
-        "B L B: (Hessen) vs (Berlin)",  # spaces in the acronym
+        "B L B: (Hessen) vs (Berlin)",  # more than one space in the acronym
+        "o!CLF26: (A) vs (B)",  # the space is part of the acronym
         "",
     ],
 )
@@ -93,6 +99,12 @@ def test_load_acronyms_upper_cases_keys(tmp_path: Path) -> None:
     assert load_acronyms(path) == {"RT": "Random Tournament", "O!FT10": "osu! finnish tournament"}
 
 
+def test_load_acronyms_with_a_space(tmp_path: Path) -> None:
+    path = write_json(tmp_path, {"o!cl f26": "osu! Champions League"})
+
+    assert load_acronyms(path) == {"O!CL F26": "osu! Champions League"}
+
+
 def test_example_file_loads() -> None:
     example = Path(__file__).parent.parent / "acronyms.example.json"
 
@@ -117,7 +129,7 @@ def test_invalid_json(tmp_path: Path) -> None:
     [
         (["RT"], "must be a JSON object"),
         ({"RT": 5}, "must be a JSON object"),
-        ({"R T": "Random"}, "can't appear before ':'"),
+        ({"R T T": "Random"}, "can't appear before ':'"),
         ({"A:B": "Random"}, "can't appear before ':'"),
         ({"(RT)": "Random"}, "can't appear before ':'"),
         ({"RT": "Random", "rt": "Random again"}, "listed twice"),

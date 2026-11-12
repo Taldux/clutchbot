@@ -56,7 +56,7 @@ def test_saving_without_changes_is_not_a_change(path: Path) -> None:
     [
         ('{"RT": "Random Tournament"', "not valid JSON"),
         ("{}", "has no tournaments"),
-        ('{"R T": "Random"}', "can't appear before ':'"),
+        ('{"R T T": "Random"}', "can't appear before ':'"),
         (None, "not found"),  # the file was deleted
     ],
 )

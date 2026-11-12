@@ -2,8 +2,7 @@ import re
 from collections.abc import Mapping
 from dataclasses import dataclass
 
-# anything but spaces, colon and brackets
-ACRONYM = r"[^\s:()]+"
+ACRONYM = r"[^\s:()]+(?: [^\s:()]+)?"
 ACRONYM_PATTERN = re.compile(rf"^(?P<acronym>{ACRONYM}):\s*(?P<rest>.*)$")
 TEAMS_PATTERN = re.compile(r"^\((?P<red>.+)\)\s+vs\.?\s+\((?P<blue>.+)\)$", re.IGNORECASE)
 
