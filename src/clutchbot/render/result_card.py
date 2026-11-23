@@ -36,7 +36,7 @@ class TeamPanel:
 class ResultCard:
     tournament: str
     date: str
-    match_link: str
+    match_id: int
     red: TeamPanel
     blue: TeamPanel
     is_draw: bool
@@ -85,7 +85,7 @@ def build_result_card(processed: ProcessedMatch, max_rows: int = MAX_PLAYER_ROWS
     return ResultCard(
         tournament=processed.names.tournament,
         date=_match_date(processed),
-        match_link=_match_link(processed),
+        match_id=processed.detail.match.id,
         red=panel(Side.RED),
         blue=panel(Side.BLUE),
         is_draw=result.winner is None,
@@ -112,7 +112,7 @@ class PlayerPanel:
 class HeadToHeadCard:
     tournament: str
     date: str
-    match_link: str
+    match_id: int
     red: PlayerPanel
     blue: PlayerPanel
     is_draw: bool
@@ -156,7 +156,7 @@ def build_head_to_head_card(processed: ProcessedMatch) -> HeadToHeadCard:
     return HeadToHeadCard(
         tournament=processed.names.tournament,
         date=_match_date(processed),
-        match_link=_match_link(processed),
+        match_id=processed.detail.match.id,
         red=panel(Side.RED),
         blue=panel(Side.BLUE),
         is_draw=result.winner is None,
@@ -187,7 +187,3 @@ def _average(scores: list[int]) -> str:
 def _match_date(processed: ProcessedMatch) -> str:
     start = processed.detail.match.start_time
     return f"{start.day} {start:%B %Y}"
-
-
-def _match_link(processed: ProcessedMatch) -> str:
-    return f"osu.ppy.sh/mp/{processed.detail.match.id}"

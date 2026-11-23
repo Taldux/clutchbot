@@ -43,7 +43,7 @@ def test_card_data() -> None:
 
     assert card.tournament == "CRTOA Tournament"
     assert card.date == "8 March 2025"
-    assert card.match_link == "osu.ppy.sh/mp/117416879"
+    assert card.match_id == 117416879
     assert (card.red.name, card.red.wins, card.red.is_winner) == ("Furball Pups", 7, True)
     assert (card.blue.name, card.blue.wins, card.blue.is_winner) == ("Junior Sleuth Teds", 6, False)
     assert not card.is_draw

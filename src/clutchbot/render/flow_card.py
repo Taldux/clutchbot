@@ -45,7 +45,7 @@ class FlowPoint:
 @dataclass(frozen=True)
 class FlowCard:
     tournament: str
-    match_link: str
+    match_id: int
     maps_played: int
     red_name: str
     blue_name: str
@@ -124,7 +124,7 @@ def build_flow_card(processed: ProcessedMatch) -> FlowCard:
     winner = result.winner
     return FlowCard(
         tournament=processed.names.tournament,
-        match_link=f"osu.ppy.sh/mp/{processed.detail.match.id}",
+        match_id=processed.detail.match.id,
         maps_played=len(result.games),
         red_name=result.red.name,
         blue_name=result.blue.name,

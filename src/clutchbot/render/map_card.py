@@ -55,7 +55,7 @@ class MapCard:
     kind: str
     label: str
     tournament: str
-    match_link: str
+    match_id: int
     map_number: int
     maps_played: int
     title: str
@@ -182,7 +182,7 @@ def _build_map_card(
         kind=kind.value,
         label=LABELS[kind],
         tournament=processed.names.tournament,
-        match_link=f"osu.ppy.sh/mp/{processed.detail.match.id}",
+        match_id=processed.detail.match.id,
         map_number=map_number,
         maps_played=len(result.games),
         title=title,
