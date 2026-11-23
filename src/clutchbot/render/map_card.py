@@ -137,6 +137,7 @@ def _build_map_card(
     result = processed.result
     users = processed.detail.users_by_id
     game = played.game
+    hidden_mods = {NO_FAIL, *game.mods}
 
     def row(score: Score) -> ScoreRow:
         user = users.get(score.user_id)
@@ -146,7 +147,7 @@ def _build_map_card(
             score=f"{score.total_score:,}",
             accuracy=f"{score.accuracy * 100:.2f}%",
             combo=f"{score.max_combo:,}x",
-            mods="".join(mod for mod in score.mod_acronyms if mod != NO_FAIL),
+            mods="".join(mod for mod in score.mod_acronyms if mod not in hidden_mods),
             is_highlighted=score is highlight,
         )
 

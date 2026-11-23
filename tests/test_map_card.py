@@ -52,7 +52,8 @@ def test_head_to_head_clutch_card() -> None:
     assert (card.red.name, card.red.total, card.red.is_winner) == ("NINERIK", "340,567", False)
     assert (card.blue.name, card.blue.total, card.blue.is_winner) == ("Welter", "342,711", True)
     ninerik = card.red.players[0]
-    assert (ninerik.accuracy, ninerik.combo, ninerik.mods) == ("95.75%", "694x", "HR")
+    assert (ninerik.accuracy, ninerik.combo) == ("95.75%", "694x")
+    assert ninerik.mods == ""  # HR was forced, it's next to the title
     assert ninerik.avatar_url is not None
     assert ninerik.avatar_url.startswith("https://a.ppy.sh/10549880?")
     assert not card.long_title  # "Ragnarok"
@@ -92,6 +93,17 @@ def test_many_players_end_in_more() -> None:
     card = build_clutch_card(match, match.clutches[0], max_rows=2)
 
     assert (len(card.red.players), card.red.hidden_players) == (1, 2)
+
+
+def test_mods_a_player_picked_are_shown_next_to_their_score() -> None:
+    match = processed(HEAD_TO_HEAD_ID)
+    clutch = clutch_at(match, 10)
+    freemod = clutch.game.game.model_copy(update={"mods": ["NF"]})
+
+    card = build_clutch_card(match, replace(clutch, game=replace(clutch.game, game=freemod)))
+
+    assert card.mods == []
+    assert card.red.players[0].mods == "HR"
 
 
 def test_star_rating_with_the_lobby_mods() -> None:
