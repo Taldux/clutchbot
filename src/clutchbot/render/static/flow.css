@@ -30,11 +30,6 @@
   text-transform: uppercase;
 }
 
-.map-count {
-  font-size: 18px;
-  font-weight: 600;
-}
-
 .tournament {
   color: var(--accent);
   font-size: 22px;
@@ -182,26 +177,10 @@
 
 .bottom {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: flex-end;
   margin-top: auto;
   padding: 12px 0 20px;
   font-size: 17px;
-}
-
-.legend {
-  display: flex;
-  gap: 18px;
-}
-
-.key::before {
-  content: "";
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 7px;
-  border-radius: 3px;
-  background: var(--kind);
 }
 
 .brand {

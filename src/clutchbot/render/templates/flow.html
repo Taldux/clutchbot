@@ -1,5 +1,4 @@
 <!doctype html>
-{% import "_parts.html" as parts %}
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -11,7 +10,6 @@
   <header class="flow-top">
     <div class="label-group">
       <span class="kind-label">Match flow</span>
-      <span class="map-count">{{ parts.plural(card.maps_played, "map") }}</span>
     </div>
     <div class="tournament ellipsis">{{ card.tournament }}</div>
   </header>
@@ -51,9 +49,6 @@
   </svg>
 
   <footer class="bottom">
-    <span class="legend muted">
-      {% for tag in card.legend %}<span class="key {{ tag.kind }}">{{ tag.label }}</span>{% endfor %}
-    </span>
     <span class="muted">{{ card.match_id }} · <span class="brand">ClutchBot</span></span>
   </footer>
 </main>

@@ -59,7 +59,6 @@ def test_clutch_and_stomp_maps_are_tagged() -> None:
     tagged = {p.map_number: [t.kind for t in p.tags] for p in card.points if p.tags}
 
     assert tagged == {5: ["clutch"], 6: ["clutch"], 7: ["stomp"], 8: ["clutch"], 10: ["clutch"]}
-    assert [t.label for t in card.legend] == ["Clutch", "Stomp"]
 
 
 def test_a_huge_score_on_the_stomp_map_keeps_both_tags() -> None:
@@ -74,7 +73,6 @@ def test_a_huge_score_on_the_stomp_map_keeps_both_tags() -> None:
     first = card.points[0]
     assert [t.kind for t in first.tags] == ["stomp", "huge"]
     assert first.tags[0].y < first.tags[1].y  # stacked
-    assert [t.label for t in card.legend] == ["Clutch", "Stomp", "Huge score"]
     assert 'class="tag huge"' in flow_card_html(card)
 
 

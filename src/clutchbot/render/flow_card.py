@@ -18,7 +18,6 @@ MIN_SPAN = 2
 TAG_HEIGHT = 24
 TAG_GAP = 4
 
-KINDS = {"clutch": "Clutch", "stomp": "Stomp", "huge": "Huge score"}
 TAG_LABELS = {"clutch": "Clutch", "stomp": "Stomp", "huge": "Huge"}
 
 
@@ -46,7 +45,6 @@ class FlowPoint:
 class FlowCard:
     tournament: str
     match_id: int
-    maps_played: int
     red_name: str
     blue_name: str
     red_wins: int
@@ -59,7 +57,6 @@ class FlowCard:
     line: str
     area: str
     points: list[FlowPoint]
-    legend: list[Tag]
 
 
 def build_flow_card(processed: ProcessedMatch) -> FlowCard:
@@ -120,12 +117,10 @@ def build_flow_card(processed: ProcessedMatch) -> FlowCard:
     coords = [(x_at(i), y_at(lead)) for i, lead in enumerate(leads)]
     line = " ".join(f"{x:.1f},{y:.1f}" for x, y in coords)
     area = f"{line} {coords[-1][0]:.1f},{zero_y:.1f} {coords[0][0]:.1f},{zero_y:.1f}"
-    used = {kind for kinds in kinds_by_map.values() for kind in kinds}
     winner = result.winner
     return FlowCard(
         tournament=processed.names.tournament,
         match_id=processed.detail.match.id,
-        maps_played=len(result.games),
         red_name=result.red.name,
         blue_name=result.blue.name,
         red_wins=result.red_wins,
@@ -138,7 +133,6 @@ def build_flow_card(processed: ProcessedMatch) -> FlowCard:
         line=line,
         area=area,
         points=points,
-        legend=[Tag(kind, label, 0) for kind, label in KINDS.items() if kind in used],
     )
 
 
