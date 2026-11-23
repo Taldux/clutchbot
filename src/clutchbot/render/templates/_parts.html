@@ -10,7 +10,6 @@
 {% macro heading(card, side) %}
 <div class="team {{ side.side }}{% if not side.is_winner and not card.is_draw %} lost{% endif %}">
   <div class="team-name{% if side.long_name %} long{% endif %}">{{ side.name }}</div>
-  {% if side.is_winner %}<div class="badge">Winner</div>{% endif %}
 </div>
 {% endmacro %}
 
