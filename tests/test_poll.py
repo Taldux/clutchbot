@@ -17,7 +17,14 @@ from clutchbot.render.cards import MatchCards, RenderedCard
 from clutchbot.storage.database import Database, MatchStatus
 from clutchbot.twitter.client import XClient
 from tests.conftest import HEAD_TO_HEAD_ID, load_fixture, metric, write_acronyms
-from tests.fakes import TOKEN_URL, X_POSTS_URL, fake_match_endpoint, fake_x, token_response
+from tests.fakes import (
+    TOKEN_URL,
+    X_POSTS_URL,
+    fake_match_endpoint,
+    fake_x,
+    serve_star_ratings,
+    token_response,
+)
 
 NOW = datetime(2026, 9, 25, 18, 0, tzinfo=UTC)
 ACRONYMS = {"DBHS": "Dio's Bizzare Holiday Singles"}
@@ -44,6 +51,7 @@ def serve_listing(respx_mock: respx.MockRouter, matches: list[dict[str, Any]]) -
 
 
 def serve_match(respx_mock: respx.MockRouter, match_json: dict[str, Any]) -> respx.Route:
+    serve_star_ratings(respx_mock)
     return respx_mock.get(path=f"{LISTING_PATH}/{match_json['match']['id']}").mock(
         side_effect=fake_match_endpoint(match_json)
     )

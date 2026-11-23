@@ -144,7 +144,7 @@ class Listener:
 
     async def _post(self, stored: StoredMatch, now: datetime, report: PollReport) -> None:
         try:
-            detail = await self._osu.get_match(stored.id)
+            detail = await self._osu.add_star_ratings(await self._osu.get_match(stored.id))
             # the acronym may have perhaps left the list
             names = parse_tournament_name(
                 detail.match.name, self._acronyms.current

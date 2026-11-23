@@ -48,3 +48,10 @@ def fake_match_endpoint(
         return httpx.Response(200, json={**match_json, "events": events, "users": users})
 
     return handler
+
+
+def serve_star_ratings(respx_mock: respx.MockRouter, star_rating: float = 9.99) -> respx.Route:
+    """Every beatmap attributes lookup answers with the same star rating"""
+    return respx_mock.post(path__regex=r"^/api/v2/beatmaps/\d+/attributes$").mock(
+        return_value=httpx.Response(200, json={"attributes": {"star_rating": star_rating}})
+    )

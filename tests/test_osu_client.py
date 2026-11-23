@@ -1,3 +1,4 @@
+import json
 from collections.abc import AsyncIterator
 from urllib.parse import parse_qs
 
@@ -9,8 +10,8 @@ from pydantic import SecretStr
 from clutchbot.osu import client as client_module
 from clutchbot.osu.client import API_VERSION, OsuClient
 from clutchbot.osu.models import MatchDetail
-from tests.conftest import MATCH_IDS, load_fixture, metric
-from tests.fakes import TOKEN_URL, fake_match_endpoint, token_response
+from tests.conftest import HEAD_TO_HEAD_ID, MATCH_IDS, load_fixture, metric
+from tests.fakes import TOKEN_URL, fake_match_endpoint, serve_star_ratings, token_response
 
 MATCH_URL = "https://osu.ppy.sh/api/v2/matches/1"
 
@@ -316,3 +317,33 @@ async def test_requests_are_counted_per_endpoint_and_status(
     assert requests("match", "200") == before["200"] + 1
     timings = metric("clutchbot_api_request_duration_seconds_count", api="osu", endpoint="match")
     assert timings == timed + 3
+
+
+async def test_star_ratings_use_the_lobby_mods_without_nf(
+    respx_mock: respx.MockRouter, osu: OsuClient
+) -> None:
+    respx_mock.post(TOKEN_URL).mock(return_value=token_response())
+    route = serve_star_ratings(respx_mock, 9.5)
+    detail = MatchDetail.model_validate(load_fixture(HEAD_TO_HEAD_ID))
+
+    rated = await osu.add_star_ratings(detail)
+
+    # DBHS: 8 maps with DT, HR or HD, 2 with only NF
+    assert route.call_count == 8
+    first = route.calls[0].request
+    assert first.url.path == "/api/v2/beatmaps/4474758/attributes"
+    assert json.loads(first.content) == {"mods": ["DT"], "ruleset": "osu"}
+    assert [game.star_rating for game in rated.games] == [9.5, 9.5, None, None, *[9.5] * 6]
+    assert requests("beatmap_attributes", "200") >= 8
+
+
+async def test_a_failed_star_rating_keeps_the_base_one(
+    respx_mock: respx.MockRouter, osu: OsuClient, sleeps: list[float]
+) -> None:
+    respx_mock.post(TOKEN_URL).mock(return_value=token_response())
+    respx_mock.post(path__regex=r"/beatmaps/\d+/attributes$").mock(return_value=httpx.Response(404))
+    detail = MatchDetail.model_validate(load_fixture(HEAD_TO_HEAD_ID))
+
+    rated = await osu.add_star_ratings(detail)
+
+    assert [game.star_rating for game in rated.games] == [None] * 10

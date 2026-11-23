@@ -13,7 +13,13 @@ from clutchbot.cli import app
 from clutchbot.listener.loop import write_heartbeat
 from clutchbot.storage.database import Database
 from tests.conftest import HEAD_TO_HEAD_ID, TEAM_VS_ID, WARMUP_MATCH_ID, load_fixture
-from tests.fakes import TOKEN_URL, fake_match_endpoint, fake_x, token_response
+from tests.fakes import (
+    TOKEN_URL,
+    fake_match_endpoint,
+    fake_x,
+    serve_star_ratings,
+    token_response,
+)
 
 runner = CliRunner()
 
@@ -53,6 +59,7 @@ def serve_match(respx_mock: respx.MockRouter, match_id: int) -> None:
     respx_mock.get(path=f"/api/v2/matches/{match_id}").mock(
         side_effect=fake_match_endpoint(load_fixture(match_id))
     )
+    serve_star_ratings(respx_mock)
 
 
 def serve_missing_images(respx_mock: respx.MockRouter) -> None:

@@ -12,7 +12,7 @@ from pydantic import BaseModel, SecretStr
 from tenacity import AsyncRetrying, RetryCallState, retry_if_exception, stop_after_attempt
 
 from clutchbot.metrics import timed_request
-from clutchbot.osu.models import Match, MatchDetail, MatchListing
+from clutchbot.osu.models import BeatmapAttributes, Match, MatchDetail, MatchListing
 
 log = logging.getLogger(__name__)
 
@@ -24,6 +24,7 @@ LISTING_PAGE_SIZE = 50  # API max
 MAX_ATTEMPTS = 5
 RETRY_BASE_DELAY_SECONDS = 1.0
 MAX_RETRY_WAIT_SECONDS = 60.0
+NO_FAIL = "NF"
 
 Params = dict[str, str | int]
 
@@ -120,6 +121,43 @@ class OsuClient:
         )
         return detail.match
 
+    async def get_star_rating(self, beatmap_id: int, mods: list[str], ruleset: str) -> float:
+        data = await self._request_json(
+            "POST", f"/beatmaps/{beatmap_id}/attributes", json={"mods": mods, "ruleset": ruleset}
+        )
+        return BeatmapAttributes.model_validate(data).attributes.star_rating
+
+    async def add_star_ratings(self, detail: MatchDetail) -> MatchDetail:
+        # only with mods the whole lobby played
+        ratings: dict[tuple[int, tuple[str, ...], str], float | None] = {}
+        events = []
+        for event in detail.events:
+            game = event.game
+            mods = tuple(sorted(mod for mod in game.mods if mod != NO_FAIL)) if game else ()
+            if game is None or game.beatmap is None or not mods:
+                events.append(event)
+                continue
+            key = (game.beatmap_id, mods, game.mode)
+            if key not in ratings:
+                ratings[key] = await self._star_rating_or_none(*key)
+            game = game.model_copy(update={"star_rating": ratings[key]})
+            events.append(event.model_copy(update={"game": game}))
+        return detail.model_copy(update={"events": events})
+
+    async def _star_rating_or_none(
+        self, beatmap_id: int, mods: tuple[str, ...], ruleset: str
+    ) -> float | None:
+        try:
+            return await self.get_star_rating(beatmap_id, list(mods), ruleset)
+        except httpx.HTTPError as exc:
+            log.warning(
+                "No star rating for beatmap %d with %s: %s",
+                beatmap_id,
+                "".join(mods),
+                type(exc).__name__,
+            )
+            return None
+
     async def list_matches(
         self, cursor: str | None = None, *, active: bool | None = None
     ) -> MatchListing:
@@ -179,6 +217,11 @@ class OsuClient:
         return token.access_token
 
     async def _get_json(self, path: str, params: Params | None = None) -> Any:
+        return await self._request_json("GET", path, params=params)
+
+    async def _request_json(
+        self, method: str, path: str, *, params: Params | None = None, json: Any = None
+    ) -> Any:
         retrying = AsyncRetrying(
             retry=retry_if_exception(_is_retryable),
             stop=stop_after_attempt(MAX_ATTEMPTS),
@@ -187,25 +230,34 @@ class OsuClient:
             before_sleep=_log_retry,
             reraise=True,
         )
-        return await retrying(self._get_json_once, path, params)
+        return await retrying(self._request_json_once, method, path, params, json)
 
-    async def _get_json_once(self, path: str, params: Params | None) -> Any:
-        response = await self._send_get(path, params)
+    async def _request_json_once(
+        self, method: str, path: str, params: Params | None, json: Any
+    ) -> Any:
+        response = await self._send(method, path, params, json)
         # revoked or expired token, drop it and try once more with a fresh one
         if response.status_code == httpx.codes.UNAUTHORIZED:
             log.warning("osu! API returned 401, fetching a new token")
             self._token = None
-            response = await self._send_get(path, params)
+            response = await self._send(method, path, params, json)
         response.raise_for_status()
         return response.json()
 
-    async def _send_get(self, path: str, params: Params | None) -> httpx.Response:
+    async def _send(
+        self, method: str, path: str, params: Params | None, json: Any
+    ) -> httpx.Response:
         token = await self._access_token()
-        request = self._http.get(
+        request = self._http.request(
+            method,
             f"/api/v2{path}",
             params=params,
+            json=json,
             headers={"Authorization": f"Bearer {token}"},
         )
         # a fixed name per endpoint
-        endpoint = "matches" if path == "/matches" else "match"
+        if path.startswith("/beatmaps/"):
+            endpoint = "beatmap_attributes"
+        else:
+            endpoint = "matches" if path == "/matches" else "match"
         return await timed_request("osu", endpoint, request)

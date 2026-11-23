@@ -509,7 +509,7 @@ def _load_acronyms_if_present(settings: Settings) -> dict[str, str]:
 async def _fetch_match(settings: Settings, match_id: int) -> MatchDetail:
     try:
         async with OsuClient(settings.osu_client_id, settings.osu_client_secret) as osu:
-            return await osu.get_match(match_id)
+            return await osu.add_star_ratings(await osu.get_match(match_id))
     except httpx.HTTPStatusError as exc:
         if exc.response.status_code == httpx.codes.NOT_FOUND:
             _fail(f"Match {match_id} not found (or private)")

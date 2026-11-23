@@ -189,7 +189,7 @@ def _build_map_card(
         long_title=len(title) > LONG_TITLE,
         artist=beatmap.beatmapset.artist if beatmap else "",
         version=beatmap.version if beatmap else "",
-        stars=f"{beatmap.difficulty_rating:.2f}" if beatmap else "",
+        stars=f"{game.star_rating or beatmap.difficulty_rating:.2f}" if beatmap else "",
         mods=[mod for mod in game.mods if mod != NO_FAIL],
         cover_url=beatmap.beatmapset.covers.cover_2x if beatmap else None,
         headline=headline,

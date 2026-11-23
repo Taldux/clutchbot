@@ -72,6 +72,7 @@ class Game(OsuModel):
     mods: list[str]  # acronyms
     beatmap: Beatmap | None = None  # missing for deleted beatmaps
     scores: list[Score]
+    star_rating: float | None = None
 
 
 class EventDetail(OsuModel):
@@ -125,3 +126,11 @@ class MatchDetail(OsuModel):
 class MatchListing(OsuModel):
     matches: list[Match]
     cursor_string: str | None
+
+
+class DifficultyAttributes(OsuModel):
+    star_rating: float
+
+
+class BeatmapAttributes(OsuModel):
+    attributes: DifficultyAttributes

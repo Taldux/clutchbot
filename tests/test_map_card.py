@@ -94,6 +94,16 @@ def test_many_players_end_in_more() -> None:
     assert (len(card.red.players), card.red.hidden_players) == (1, 2)
 
 
+def test_star_rating_with_the_lobby_mods() -> None:
+    match = processed(HEAD_TO_HEAD_ID)
+    clutch = clutch_at(match, 10)
+    game = clutch.game.game.model_copy(update={"star_rating": 9.214})
+
+    card = build_clutch_card(match, replace(clutch, game=replace(clutch.game, game=game)))
+
+    assert card.stars == "9.21"
+
+
 def test_deleted_beatmap() -> None:
     match = processed(HEAD_TO_HEAD_ID)
     clutch = clutch_at(match, 10)
